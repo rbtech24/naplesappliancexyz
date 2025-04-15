@@ -32,13 +32,85 @@ const ServiceTemplate = ({
       <Helmet>
         <title>{service.title} in Naples, FL | {siteMetadata.title}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={`${service.title.toLowerCase()}, appliance repair, Naples, Florida, ${service.title.toLowerCase()} service, ${service.title.toLowerCase()} repair`} />
+        <meta name="keywords" content={`${service.title.toLowerCase()}, appliance repair, Naples, Florida, ${service.title.toLowerCase()} service, ${service.title.toLowerCase()} repair, Collier County, professional, same-day service`} />
+        
+        {/* Open Graph / Facebook */}
         <meta property="og:title" content={`${service.title} in Naples, FL | ${siteMetadata.title}`} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteMetadata.siteUrl}/services/${service.id}`} />
         <meta property="og:image" content={service.image} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${service.title} in Naples, FL | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content={metaDescription} />
+        
+        {/* Canonical */}
         <link rel="canonical" href={`${siteMetadata.siteUrl}/services/${service.id}`} />
+        
+        {/* Service Schema.org structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": `${service.title} in Naples, FL`,
+            "serviceType": service.title,
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "Naples Appliance Repair",
+              "telephone": siteMetadata.phoneNumber,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5405 Taylor Rd",
+                "addressLocality": "Naples",
+                "addressRegion": "FL",
+                "postalCode": "34109",
+                "addressCountry": "US"
+              }
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Naples",
+              "containedInPlace": {
+                "@type": "State",
+                "name": "Florida"
+              }
+            },
+            "description": metaDescription,
+            "offers": {
+              "@type": "Offer",
+              "price": "85.00",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "85.00",
+                "priceCurrency": "USD",
+                "description": "Starting diagnostic fee"
+              }
+            },
+            "termsOfService": "Professional repairs with warranty on parts and labor",
+            "url": `${siteMetadata.siteUrl}/services/${service.id}`
+          })}
+        </script>
+        
+        {/* FAQ Schema.org structured data (if FAQs are provided) */}
+        {additionalContent.faqs && additionalContent.faqs.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": additionalContent.faqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })}
+          </script>
+        )}
       </Helmet>
       
       <Header />

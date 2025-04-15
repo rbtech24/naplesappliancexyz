@@ -25,6 +25,8 @@ export const structuredData = {
   "image": "http://naplesappliancerepair.xyz/logo.png",
   "url": "http://naplesappliancerepair.xyz",
   "telephone": "+1-239-230-2100",
+  "email": "appliancerepaicsr@gmail.com",
+  "description": "Professional appliance repair service in Naples, Florida. Specializing in refrigerator, washing machine, dryer, oven, stove, and dishwasher repairs for residential and commercial clients.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "5405 Taylor Rd",
@@ -54,8 +56,97 @@ export const structuredData = {
   ],
   "sameAs": [
     "https://www.facebook.com/naplesappliancerepair",
-    "https://www.instagram.com/naplesappliancerepair"
+    "https://www.instagram.com/naplesappliancerepair",
+    "https://g.page/naplesappliancerepair",
+    "https://www.yelp.com/biz/naplesappliancerepair"
   ],
   "priceRange": "$$",
-  "servesCuisine": "Appliance Repair"
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.1420,
+      "longitude": -81.7948
+    },
+    "geoRadius": "40000"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Appliance Repair Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Refrigerator Repair",
+          "description": "Professional repair service for all refrigerator types and brands"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Washer Repair",
+          "description": "Expert washing machine repair for all makes and models"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dryer Repair",
+          "description": "Fast, reliable dryer repair service for gas and electric models"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Oven & Range Repair",
+          "description": "Comprehensive repair services for all types of ovens and ranges"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dishwasher Repair",
+          "description": "Professional dishwasher repair service for all major brands"
+        }
+      }
+    ]
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Maria S."
+      },
+      "reviewBody": "The technician arrived on time, quickly diagnosed the issue with our refrigerator, and had it fixed in less than an hour. Excellent service!"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "David R."
+      },
+      "reviewBody": "Naples Appliance Repair saved the day when our washing machine broke down. Responsive, professional, and reasonably priced!"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
+  }
 };

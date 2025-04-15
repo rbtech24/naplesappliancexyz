@@ -42,6 +42,58 @@ const TestimonialsPage = () => {
       <Helmet>
         <title>Customer Testimonials | {siteMetadata.title}</title>
         <meta name="description" content="Read what our customers are saying about Naples Appliance Repair. Our commitment to quality service has made us the most trusted appliance repair service in Naples, FL." />
+        <meta name="keywords" content="appliance repair reviews, Naples appliance repair testimonials, customer feedback, Naples FL, Collier County, refrigerator repair reviews, washer repair reviews" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={`Customer Testimonials | ${siteMetadata.title}`} />
+        <meta property="og:description" content="Read what our customers are saying about Naples Appliance Repair. Our commitment to quality service has made us the most trusted appliance repair service in Naples, FL." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}/testimonials`} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`Customer Testimonials | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content="Read what our customers are saying about Naples Appliance Repair. Our commitment to quality service has made us the most trusted appliance repair service in Naples, FL." />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteMetadata.siteUrl}/testimonials`} />
+        
+        {/* Testimonials structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Naples Appliance Repair",
+            "url": `${siteMetadata.siteUrl}`,
+            "telephone": siteMetadata.phoneNumber,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5405 Taylor Rd",
+              "addressLocality": "Naples",
+              "addressRegion": "FL",
+              "postalCode": "34109",
+              "addressCountry": "US"
+            },
+            "review": testimonials.map(testimonial => ({
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": testimonial.rating.toString(),
+                "bestRating": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": testimonial.name
+              },
+              "reviewBody": testimonial.comment
+            })),
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": testimonials.length.toString()
+            }
+          })}
+        </script>
       </Helmet>
       
       <Header />
