@@ -1,20 +1,24 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { siteMetadata } from "@/lib/seo";
 import { services, serviceAreas } from "@/lib/serviceData";
 
 const Footer = () => {
   const year = new Date().getFullYear();
+  const [location] = useLocation();
+  const isHomePage = location === "/";
 
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center mb-6">
-              <span className="text-white text-2xl font-heading font-bold">Naples</span>
-              <span className="text-[#00a0e9] text-2xl font-heading font-bold">Appliance</span>
-              <span className="text-[#ff6b00] ml-1 text-2xl font-heading font-bold">Repair</span>
-            </div>
+            <Link href="/">
+              <div className="flex items-center mb-6 cursor-pointer">
+                <span className="text-white text-2xl font-heading font-bold">Naples</span>
+                <span className="text-[#00a0e9] text-2xl font-heading font-bold">Appliance</span>
+                <span className="text-[#ff6b00] ml-1 text-2xl font-heading font-bold">Repair</span>
+              </div>
+            </Link>
             <p className="text-gray-400 mb-6">
               Professional appliance repair services in Naples, Florida. Fast, reliable service for all major brands and models.
             </p>
@@ -39,15 +43,23 @@ const Footer = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.id}>
-                  <a href={`#${service.id}`} className="text-gray-400 hover:text-white transition">
-                    {service.title}
-                  </a>
+                  <Link 
+                    href={`/services/${service.id}`} 
+                    className="text-gray-400 hover:text-white transition flex items-center"
+                  >
+                    <i className={`fas ${service.icon} text-[#ff6b00] text-xs mr-2`}></i>
+                    <span>{service.title}</span>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition">
-                  Commercial Appliance Repair
-                </a>
+                <Link 
+                  href={isHomePage ? "#services" : "/#services"} 
+                  className="text-gray-400 hover:text-white transition flex items-center"
+                >
+                  <i className="fas fa-building text-[#ff6b00] text-xs mr-2"></i>
+                  <span>Commercial Appliance Repair</span>
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,15 +69,21 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceAreas.slice(0, 6).map((area, index) => (
                 <li key={index}>
-                  <a href="#service-areas" className="text-gray-400 hover:text-white transition">
+                  <Link 
+                    href={isHomePage ? "#service-areas" : "/#service-areas"} 
+                    className="text-gray-400 hover:text-white transition"
+                  >
                     {area.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a href="#service-areas" className="text-gray-400 hover:text-white transition">
+                <Link 
+                  href={isHomePage ? "#service-areas" : "/#service-areas"} 
+                  className="text-gray-400 hover:text-white transition font-medium"
+                >
                   See All Locations
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,11 +97,15 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <i className="fas fa-phone-alt mt-1 mr-3 text-[#ff6b00]"></i>
-                <span>{siteMetadata.phoneNumber}</span>
+                <a href={`tel:${siteMetadata.phoneNumber}`} className="hover:text-[#ff6b00] transition">
+                  {siteMetadata.phoneNumber}
+                </a>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-envelope mt-1 mr-3 text-[#ff6b00]"></i>
-                <span>{siteMetadata.email}</span>
+                <a href={`mailto:${siteMetadata.email}`} className="hover:text-[#ff6b00] transition">
+                  {siteMetadata.email}
+                </a>
               </li>
               <li className="flex items-start">
                 <i className="fas fa-clock mt-1 mr-3 text-[#ff6b00]"></i>
@@ -105,9 +127,9 @@ const Footer = () => {
           </p>
           <div>
             <ul className="flex flex-wrap justify-center space-x-4 text-sm">
-              <li><a href="#" className="text-gray-500 hover:text-white transition">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-white transition">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-white transition">Sitemap</a></li>
+              <li><Link href="#" className="text-gray-500 hover:text-white transition">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-gray-500 hover:text-white transition">Terms of Service</Link></li>
+              <li><Link href="#" className="text-gray-500 hover:text-white transition">Sitemap</Link></li>
             </ul>
           </div>
         </div>

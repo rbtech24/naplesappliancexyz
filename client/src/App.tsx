@@ -4,6 +4,11 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 import SEO from "./components/SEO";
 import MobileCallBar from "./components/layout/MobileCallBar";
+import RefrigeratorRepair from "@/pages/services/RefrigeratorRepair";
+import WasherRepair from "@/pages/services/WasherRepair";
+import OvenRepair from "@/pages/services/OvenRepair";
+import DishwasherRepair from "@/pages/services/DishwasherRepair";
+import DryerRepair from "@/pages/services/DryerRepair";
 
 function App() {
   return (
@@ -11,6 +16,11 @@ function App() {
       <SEO />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/services/refrigerator" component={RefrigeratorRepair} />
+        <Route path="/services/washer" component={WasherRepair} />
+        <Route path="/services/oven" component={OvenRepair} />
+        <Route path="/services/dishwasher" component={DishwasherRepair} />
+        <Route path="/services/dryer" component={DryerRepair} />
         <Route component={NotFound} />
       </Switch>
       <MobileCallBar />
