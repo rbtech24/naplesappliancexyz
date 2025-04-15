@@ -51,6 +51,124 @@ const ServiceAreasPage = () => {
       <Helmet>
         <title>Service Areas | {siteMetadata.title}</title>
         <meta name="description" content="Naples Appliance Repair services all of Naples, Marco Island, Bonita Springs, Estero and surrounding areas in Collier County, Florida. See our complete service coverage map." />
+        <meta name="keywords" content="Naples appliance repair service areas, Collier County appliance repair, Marco Island appliance service, Bonita Springs appliance repair, Estero appliance repair, Florida appliance technicians, appliance repair coverage map" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={`Service Areas | ${siteMetadata.title}`} />
+        <meta property="og:description" content="Naples Appliance Repair services all of Naples, Marco Island, Bonita Springs, Estero and surrounding areas in Collier County, Florida. See our complete service coverage map." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}/service-areas`} />
+        <meta property="og:image" content={collierCountyMapUrl} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`Service Areas | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content="Naples Appliance Repair services all of Naples, Marco Island, Bonita Springs, Estero and surrounding areas in Collier County, Florida. See our complete service coverage map." />
+        <meta name="twitter:image" content={collierCountyMapUrl} />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteMetadata.siteUrl}/service-areas`} />
+        
+        {/* Service Areas structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Naples Appliance Repair",
+            "url": siteMetadata.siteUrl,
+            "telephone": siteMetadata.phoneNumber,
+            "email": siteMetadata.email,
+            "image": `${siteMetadata.siteUrl}/logo.png`,
+            "description": "Professional appliance repair service covering Naples, Marco Island, Bonita Springs, Estero and surrounding areas in Collier County, Florida.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5405 Taylor Rd",
+              "addressLocality": "Naples",
+              "addressRegion": "FL",
+              "postalCode": "34109",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 26.1420,
+              "longitude": -81.7948
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Naples",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Florida"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Marco Island",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Florida"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Bonita Springs",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Florida"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Estero",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Florida"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Golden Gate",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Florida"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "Immokalee",
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": "Florida"
+                }
+              }
+            ],
+            "hasMap": collierCountyMapUrl,
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 26.1420,
+                "longitude": -81.7948
+              },
+              "geoRadius": "40000"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "15:00"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       
       <Header />

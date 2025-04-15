@@ -37,6 +37,75 @@ const AboutUsPage = () => {
       <Helmet>
         <title>About Us | {siteMetadata.title}</title>
         <meta name="description" content="Learn about Naples Appliance Repair, the trusted name in appliance repair in Naples, FL with over 15 years of experience serving Southwest Florida." />
+        <meta name="keywords" content="Naples appliance repair company, appliance repair experts, Naples FL, Collier County, certified technicians, family-owned business, about us, company history, appliance repair values" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={`About Us | ${siteMetadata.title}`} />
+        <meta property="og:description" content="Learn about Naples Appliance Repair, the trusted name in appliance repair in Naples, FL with over 15 years of experience serving Southwest Florida." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}/about`} />
+        <meta property="og:image" content={collierCountyMapUrl} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`About Us | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content="Learn about Naples Appliance Repair, the trusted name in appliance repair in Naples, FL with over 15 years of experience serving Southwest Florida." />
+        <meta name="twitter:image" content={collierCountyMapUrl} />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteMetadata.siteUrl}/about`} />
+        
+        {/* About Us structured data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Naples Appliance Repair",
+              "url": siteMetadata.siteUrl,
+              "logo": `${siteMetadata.siteUrl}/logo.png`,
+              "description": "Naples Appliance Repair is a family-owned business with over 15 years of experience providing professional appliance repair services throughout Naples and Southwest Florida.",
+              "foundingDate": "2008",
+              "founders": [
+                {
+                  "@type": "Person",
+                  "name": "Naples Appliance Repair Founder"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5405 Taylor Rd",
+                "addressLocality": "Naples",
+                "addressRegion": "FL",
+                "postalCode": "34109",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": siteMetadata.phoneNumber,
+                "contactType": "customer service",
+                "email": siteMetadata.email,
+                "areaServed": "Naples, FL and surrounding areas"
+              },
+              "knowsAbout": [
+                "Refrigerator Repair",
+                "Washer Repair",
+                "Dryer Repair",
+                "Oven Repair",
+                "Dishwasher Repair",
+                "Microwave Repair",
+                "Appliance Maintenance"
+              ],
+              "hasCredential": [
+                "Factory Trained Certification",
+                "EPA Certification",
+                "Technical Expertise Certification"
+              ],
+              "slogan": "The most trusted appliance repair service in Southwest Florida"
+            }
+          })}
+        </script>
       </Helmet>
       
       <Header />
