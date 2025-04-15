@@ -136,8 +136,9 @@ const ContactSection = () => {
                     id="appliance" 
                     required 
                     className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
+                    defaultValue=""
                   >
-                    <option value="" disabled selected>Select Appliance</option>
+                    <option value="" disabled>Select Appliance</option>
                     <option value="refrigerator">Refrigerator</option>
                     <option value="washer">Washer</option>
                     <option value="dryer">Dryer</option>
