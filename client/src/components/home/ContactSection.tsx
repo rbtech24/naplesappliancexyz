@@ -1,83 +1,7 @@
-import { useForm } from "react-hook-form";
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
 import { siteMetadata } from "@/lib/seo";
-import { ContactFormData } from "@/types";
-import { insertContactRequestSchema } from "@shared/schema";
-
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 
-// Extend the schema for client-side validation
-const formSchema = insertContactRequestSchema.extend({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  issue: z.string().min(10, { message: "Please provide more details about the issue" }),
-});
-
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      phone: "",
-      email: "",
-      address: "",
-      appliance: "",
-      issue: "",
-      preferred_date: ""
-    }
-  });
-
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
-    try {
-      const response = await apiRequest("POST", "/api/contact", data);
-      const result = await response.json();
-      
-      if (result.success) {
-        toast({
-          title: "Success!",
-          description: result.message,
-        });
-        form.reset();
-      } else {
-        throw new Error(result.message);
-      }
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -152,130 +76,106 @@ const ContactSection = () => {
             <div className="bg-gray-50 p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-heading font-bold mb-6">Schedule Service</h3>
               
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Name*</FormLabel>
-                          <FormControl>
-                            <Input {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Phone*</FormLabel>
-                          <FormControl>
-                            <Input type="tel" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email*</FormLabel>
-                          <FormControl>
-                            <Input type="email" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="address"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Address</FormLabel>
-                          <FormControl>
-                            <Input {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
+              <form action="https://formsubmit.co/appliancerepaicsr@gmail.com" method="POST" className="space-y-6">
+                {/* FormSubmit.co configuration */}
+                <input type="hidden" name="_subject" value="Naples Appliance Repair - New Service Request" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://naplesappliancerepair.xyz/?thankyou=true" />
+                <input type="text" name="_honey" style={{ display: 'none' }} />
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name*</label>
+                    <input 
+                      type="text" 
+                      name="name" 
+                      id="name" 
+                      required 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
                     />
                   </div>
                   
-                  <FormField
-                    control={form.control}
-                    name="appliance"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Appliance Type*</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select Appliance" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="refrigerator">Refrigerator</SelectItem>
-                            <SelectItem value="washer">Washer</SelectItem>
-                            <SelectItem value="dryer">Dryer</SelectItem>
-                            <SelectItem value="oven">Oven/Range</SelectItem>
-                            <SelectItem value="dishwasher">Dishwasher</SelectItem>
-                            <SelectItem value="microwave">Microwave</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone*</label>
+                    <input 
+                      type="tel" 
+                      name="phone" 
+                      id="phone" 
+                      required 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
+                    />
+                  </div>
                   
-                  <FormField
-                    control={form.control}
-                    name="issue"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Description of Issue*</FormLabel>
-                        <FormControl>
-                          <Textarea rows={4} {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                    <input 
+                      type="email" 
+                      name="email" 
+                      id="email" 
+                      required 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
+                    />
+                  </div>
                   
-                  <FormField
-                    control={form.control}
-                    name="preferred_date"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Preferred Service Date</FormLabel>
-                        <FormControl>
-                          <Input type="date" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-[#0056b3] hover:bg-[#ff6b00] text-white font-bold py-3 px-4 rounded-md shadow-md"
-                    disabled={isSubmitting}
+                  <div>
+                    <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                    <input 
+                      type="text" 
+                      name="address" 
+                      id="address" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="appliance" className="block text-sm font-medium text-gray-700 mb-1">Appliance Type*</label>
+                  <select 
+                    name="appliance" 
+                    id="appliance" 
+                    required 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
                   >
-                    {isSubmitting ? "Submitting..." : "Submit Request"}
-                  </Button>
-                </form>
-              </Form>
+                    <option value="" disabled selected>Select Appliance</option>
+                    <option value="refrigerator">Refrigerator</option>
+                    <option value="washer">Washer</option>
+                    <option value="dryer">Dryer</option>
+                    <option value="oven">Oven/Range</option>
+                    <option value="dishwasher">Dishwasher</option>
+                    <option value="microwave">Microwave</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="issue" className="block text-sm font-medium text-gray-700 mb-1">Description of Issue*</label>
+                  <textarea 
+                    name="issue" 
+                    id="issue" 
+                    rows={4} 
+                    required 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
+                  ></textarea>
+                </div>
+                
+                <div>
+                  <label htmlFor="preferred_date" className="block text-sm font-medium text-gray-700 mb-1">Preferred Service Date</label>
+                  <input 
+                    type="date" 
+                    name="preferred_date" 
+                    id="preferred_date" 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#0056b3] focus:border-[#0056b3]"
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-[#0056b3] hover:bg-[#ff6b00] text-white font-bold py-3 px-4 rounded-md shadow-md"
+                >
+                  Submit Request
+                </Button>
+              </form>
             </div>
           </div>
         </div>

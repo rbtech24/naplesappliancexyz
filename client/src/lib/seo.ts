@@ -2,8 +2,8 @@ export const siteMetadata = {
   title: "Naples Appliance Repair - Expert Service in Naples, FL",
   description: "Fast, reliable appliance repair service in Naples, Florida. Same-day repairs for refrigerators, washers, dryers, ovens and more by certified technicians.",
   siteUrl: "http://naplesappliancerepair.xyz",
-  phoneNumber: "(239) 555-1234",
-  email: "service@naplesappliancerepair.xyz",
+  phoneNumber: "(239) 230-2100",
+  email: "appliancerepaicsr@gmail.com",
   address: "5405 Taylor Rd, Naples, FL 34109",
   openingHours: {
     weekdays: "8am-6pm",
@@ -24,7 +24,7 @@ export const structuredData = {
   "name": "Naples Appliance Repair",
   "image": "http://naplesappliancerepair.xyz/logo.png",
   "url": "http://naplesappliancerepair.xyz",
-  "telephone": "+1-239-555-1234",
+  "telephone": "+1-239-230-2100",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "5405 Taylor Rd",
