@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { siteMetadata } from "@/lib/seo";
+import kitchenImage from "@assets/oven.webp";
 
 const CTASection = () => {
   return (
     <section className="py-16 bg-[#0056b3] relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <img 
-          src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1920&h=600" 
-          alt="Naples beach scene" 
+          src={kitchenImage} 
+          alt="Modern kitchen with appliances" 
           className="object-cover w-full h-full"
         />
       </div>
