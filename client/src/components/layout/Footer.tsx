@@ -70,7 +70,7 @@ const Footer = () => {
               {serviceAreas.slice(0, 6).map((area, index) => (
                 <li key={index}>
                   <Link 
-                    href={isHomePage ? "#service-areas" : "/#service-areas"} 
+                    href="/service-areas" 
                     className="text-gray-400 hover:text-white transition"
                   >
                     {area.name}
@@ -79,7 +79,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link 
-                  href={isHomePage ? "#service-areas" : "/#service-areas"} 
+                  href="/service-areas" 
                   className="text-gray-400 hover:text-white transition font-medium"
                 >
                   See All Locations
@@ -127,9 +127,9 @@ const Footer = () => {
           </p>
           <div>
             <ul className="flex flex-wrap justify-center space-x-4 text-sm">
-              <li><Link href="#" className="text-gray-500 hover:text-white transition">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-white transition">Terms of Service</Link></li>
-              <li><Link href="#" className="text-gray-500 hover:text-white transition">Sitemap</Link></li>
+              <li><Link href="/about" className="text-gray-500 hover:text-white transition">About Us</Link></li>
+              <li><Link href="/testimonials" className="text-gray-500 hover:text-white transition">Testimonials</Link></li>
+              <li><Link href="/service-areas" className="text-gray-500 hover:text-white transition">Service Areas</Link></li>
             </ul>
           </div>
         </div>

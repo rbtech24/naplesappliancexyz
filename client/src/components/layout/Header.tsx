@@ -108,17 +108,17 @@ const Header = () => {
             </li>
             
             <li className="flex items-center">
-              <Link href={isHomePage ? "#about" : "/#about"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <Link href={isHomePage ? "#about" : "/about"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 About Us
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href={isHomePage ? "#testimonials" : "/#testimonials"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <Link href={isHomePage ? "#testimonials" : "/testimonials"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Testimonials
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href={isHomePage ? "#service-areas" : "/#service-areas"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <Link href={isHomePage ? "#service-areas" : "/service-areas"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Service Areas
               </Link>
             </li>
@@ -170,17 +170,17 @@ const Header = () => {
           </li>
           
           <li className="py-2">
-            <Link href={isHomePage ? "#about" : "/#about"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <Link href={isHomePage ? "#about" : "/about"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               About Us
             </Link>
           </li>
           <li className="py-2">
-            <Link href={isHomePage ? "#testimonials" : "/#testimonials"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <Link href={isHomePage ? "#testimonials" : "/testimonials"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Testimonials
             </Link>
           </li>
           <li className="py-2">
-            <Link href={isHomePage ? "#service-areas" : "/#service-areas"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <Link href={isHomePage ? "#service-areas" : "/service-areas"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Service Areas
             </Link>
           </li>

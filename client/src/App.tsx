@@ -11,12 +11,20 @@ import DishwasherRepair from "@/pages/services/DishwasherRepair";
 import DryerRepair from "@/pages/services/DryerRepair";
 import MicrowaveRepair from "@/pages/services/MicrowaveRepair";
 
+// New Pages
+import AboutUsPage from "@/pages/AboutUs";
+import TestimonialsPage from "@/pages/Testimonials";
+import ServiceAreasPage from "@/pages/ServiceAreas";
+
 function App() {
   return (
     <>
       <SEO />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/about" component={AboutUsPage} />
+        <Route path="/testimonials" component={TestimonialsPage} />
+        <Route path="/service-areas" component={ServiceAreasPage} />
         <Route path="/services/refrigerator" component={RefrigeratorRepair} />
         <Route path="/services/washer" component={WasherRepair} />
         <Route path="/services/oven" component={OvenRepair} />
