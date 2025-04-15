@@ -43,7 +43,7 @@ const ServiceTemplate = ({
       
       <Header />
 
-      <main className="pt-16">
+      <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[#0056b3] to-[#0072e5] text-white py-16">
           <div className="container mx-auto px-4">

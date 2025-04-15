@@ -75,7 +75,7 @@ const Header = () => {
             <li className="relative" ref={servicesDropdownRef}>
               <button 
                 onClick={toggleServicesDropdown}
-                className="flex items-center hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]"
+                className="flex items-center hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00] text-sm font-semibold"
               >
                 Services <i className={`fas fa-chevron-down ml-1 text-xs transform transition ${isServicesDropdownOpen ? 'rotate-180' : ''}`}></i>
               </button>

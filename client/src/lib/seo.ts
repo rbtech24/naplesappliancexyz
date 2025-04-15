@@ -4,7 +4,7 @@ export const siteMetadata = {
   siteUrl: "http://naplesappliancerepair.xyz",
   phoneNumber: "(239) 555-1234",
   email: "service@naplesappliancerepair.xyz",
-  address: "123 Repair Ave, Naples, FL 34102",
+  address: "5405 Taylor Rd, Naples, FL 34109",
   openingHours: {
     weekdays: "8am-6pm",
     saturday: "9am-3pm",
@@ -27,10 +27,10 @@ export const structuredData = {
   "telephone": "+1-239-555-1234",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "123 Repair Ave",
+    "streetAddress": "5405 Taylor Rd",
     "addressLocality": "Naples",
     "addressRegion": "FL",
-    "postalCode": "34102",
+    "postalCode": "34109",
     "addressCountry": "US"
   },
   "geo": {
