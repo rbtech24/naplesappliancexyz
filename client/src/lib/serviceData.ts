@@ -83,7 +83,12 @@ export const services: Service[] = [
 
 export const brands = [
   "Samsung", "LG", "Whirlpool", "GE", "Maytag", "Bosch", 
-  "KitchenAid", "Frigidaire", "Electrolux", "Kenmore"
+  "KitchenAid", "Frigidaire", "Electrolux", "Kenmore",
+  "Sub-Zero", "Wolf", "Viking", "Thermador", "Miele", 
+  "Fisher & Paykel", "Dacor", "JennAir", "Asko", "Speed Queen", 
+  "Amana", "Haier", "Bertazzoni", "Smeg", "Sharp", "Panasonic", 
+  "Toshiba", "Hotpoint", "Roper", "Admiral", "Magic Chef", 
+  "U-Line", "Scotsman", "BlueStar", "True", "Fulgor Milano"
 ];
 
 export const faqs: FAQ[] = [

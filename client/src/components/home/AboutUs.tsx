@@ -24,24 +24,8 @@ const AboutUs = () => {
     }
   ];
 
-  const images = [
-    {
-      src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=500&h=300",
-      alt: "Appliance repair technician"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&h=300",
-      alt: "Technician repairing refrigerator"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1565183928294-7063f23ce0f8?auto=format&fit=crop&w=500&h=300",
-      alt: "Naples Florida beach scene"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?auto=format&fit=crop&w=500&h=300",
-      alt: "Home appliance repair"
-    }
-  ];
+  // Map of Collier County replacing the 4 images
+  const collierCountyMapUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Map_of_Florida_highlighting_Collier_County.svg/1200px-Map_of_Florida_highlighting_Collier_County.svg.png";
 
   return (
     <section id="about" className="py-16 bg-white">
@@ -73,15 +57,12 @@ const AboutUs = () => {
             </Button>
           </div>
           <div className="lg:w-1/2">
-            <div className="grid grid-cols-2 gap-4">
-              {images.map((image, index) => (
-                <img 
-                  key={index}
-                  src={image.src} 
-                  alt={image.alt} 
-                  className="rounded-lg shadow-md"
-                />
-              ))}
+            <div className="flex justify-center items-center h-full">
+              <img 
+                src={collierCountyMapUrl} 
+                alt="Map of Collier County, Florida" 
+                className="rounded-lg shadow-md w-full h-auto"
+              />
             </div>
           </div>
         </div>

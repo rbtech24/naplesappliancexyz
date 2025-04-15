@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
+import { Link } from "wouter";
 
 const ServicesSection = () => {
   return (
@@ -39,7 +40,7 @@ const ServicesSection = () => {
                   ))}
                 </ul>
                 <Button asChild className="w-full bg-[#0056b3] hover:bg-[#ff6b00] text-white font-bold py-2 px-4 rounded">
-                  <a href="#contact">Schedule Repair</a>
+                  <Link href={`/services/${service.id}`}>View More</Link>
                 </Button>
               </div>
             </div>
