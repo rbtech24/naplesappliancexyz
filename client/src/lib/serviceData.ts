@@ -5,7 +5,7 @@ export const services: Service[] = [
     id: "refrigerator",
     title: "Refrigerator Repair",
     description: "Our expert technicians can diagnose and fix issues with all refrigerator types including French door, side-by-side, top and bottom freezer models.",
-    image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1628961316105-d47bb7696fd4?auto=format&fit=crop&w=600&h=400",
     icon: "fa-snowflake",
     features: [
       "Temperature control problems",
@@ -17,7 +17,7 @@ export const services: Service[] = [
     id: "washer",
     title: "Washer Repair",
     description: "We service all types of washing machines including front load, top load, HE models, and smart washers from all major brands.",
-    image: "https://images.unsplash.com/photo-1626806787461-102c1a6f4708?auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=600&h=400",
     icon: "fa-tshirt",
     features: [
       "Leaking & drainage problems",
@@ -29,7 +29,7 @@ export const services: Service[] = [
     id: "dryer",
     title: "Dryer Repair",
     description: "Our technicians are experts at repairing both gas and electric dryers of all makes and models, including ventless and heat pump dryers.",
-    image: "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1626806787461-102c1a6f4708?auto=format&fit=crop&w=600&h=400",
     icon: "fa-wind",
     features: [
       "Not heating or taking too long to dry",
@@ -41,7 +41,7 @@ export const services: Service[] = [
     id: "oven",
     title: "Oven & Range Repair",
     description: "Our specialists repair all oven types including conventional, convection, gas, electric, and dual-fuel ranges from all major brands.",
-    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1574269252556-89926e7c5805?auto=format&fit=crop&w=600&h=400",
     icon: "fa-fire",
     features: [
       "Temperature control & calibration",
@@ -53,7 +53,7 @@ export const services: Service[] = [
     id: "dishwasher",
     title: "Dishwasher Repair",
     description: "We diagnose and repair all dishwasher problems on standard and smart models from all the leading manufacturers.",
-    image: "https://images.unsplash.com/photo-1581622558663-b2e33377dfb2?auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1584622781867-3c672132db7d?auto=format&fit=crop&w=600&h=400",
     icon: "fa-sink",
     features: [
       "Drainage & cleaning performance issues",
@@ -65,7 +65,7 @@ export const services: Service[] = [
     id: "microwave",
     title: "Microwave Repair",
     description: "We service all types of microwaves including countertop, over-the-range, built-in, and drawer models from all major brands.",
-    image: "https://images.unsplash.com/photo-1585659722983-3a675dabf27d?auto=format&fit=crop&w=600&h=400",
+    image: "https://images.unsplash.com/photo-1574181173029-0c3acd8ab159?auto=format&fit=crop&w=600&h=400",
     icon: "fa-radiation",
     features: [
       "Heating & power issues",

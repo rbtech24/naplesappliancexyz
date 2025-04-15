@@ -18,8 +18,8 @@ const ServiceAreas = () => {
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
             <img 
-              src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?auto=format&fit=crop&w=800&h=600" 
-              alt="Naples, Florida coastline" 
+              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&h=600" 
+              alt="Collier County, Florida map" 
               className="rounded-lg shadow-lg"
             />
             
