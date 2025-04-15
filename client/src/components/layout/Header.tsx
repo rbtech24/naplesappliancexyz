@@ -65,17 +65,17 @@ const Header = () => {
       <nav className="bg-[#0056b3]">
         <div className="container mx-auto px-4">
           <ul className="hidden md:flex py-3 space-x-8 text-white text-sm font-semibold">
-            <li>
+            <li className="flex items-center">
               <Link href="/" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Home
               </Link>
             </li>
             
             {/* Services Dropdown */}
-            <li className="relative" ref={servicesDropdownRef}>
+            <li className="relative flex items-center" ref={servicesDropdownRef}>
               <button 
                 onClick={toggleServicesDropdown}
-                className="flex items-center hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00] text-sm font-semibold"
+                className="flex items-center hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]"
               >
                 Services <i className={`fas fa-chevron-down ml-1 text-xs transform transition ${isServicesDropdownOpen ? 'rotate-180' : ''}`}></i>
               </button>
@@ -107,22 +107,22 @@ const Header = () => {
               )}
             </li>
             
-            <li>
+            <li className="flex items-center">
               <Link href={isHomePage ? "#about" : "/#about"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 About Us
               </Link>
             </li>
-            <li>
+            <li className="flex items-center">
               <Link href={isHomePage ? "#testimonials" : "/#testimonials"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Testimonials
               </Link>
             </li>
-            <li>
+            <li className="flex items-center">
               <Link href={isHomePage ? "#service-areas" : "/#service-areas"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Service Areas
               </Link>
             </li>
-            <li>
+            <li className="flex items-center">
               <Link href={isHomePage ? "#contact" : "/#contact"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Contact
               </Link>

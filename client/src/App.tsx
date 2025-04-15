@@ -9,6 +9,7 @@ import WasherRepair from "@/pages/services/WasherRepair";
 import OvenRepair from "@/pages/services/OvenRepair";
 import DishwasherRepair from "@/pages/services/DishwasherRepair";
 import DryerRepair from "@/pages/services/DryerRepair";
+import MicrowaveRepair from "@/pages/services/MicrowaveRepair";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/services/oven" component={OvenRepair} />
         <Route path="/services/dishwasher" component={DishwasherRepair} />
         <Route path="/services/dryer" component={DryerRepair} />
+        <Route path="/services/microwave" component={MicrowaveRepair} />
         <Route component={NotFound} />
       </Switch>
       <MobileCallBar />
