@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 import SEO from "./components/SEO";
+import MobileCallBar from "./components/layout/MobileCallBar";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" component={Home} />
         <Route component={NotFound} />
       </Switch>
+      <MobileCallBar />
       <Toaster />
     </>
   );
