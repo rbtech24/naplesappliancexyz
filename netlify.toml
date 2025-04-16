@@ -1,4 +1,26 @@
+# This file tells Netlify how to handle routing for a single-page application
+
+# Enable asset optimization
+[build]
+  command = "npm run build && node netlify-postbuild.js"
+  publish = "dist/public"
+  environment = { NODE_VERSION = "20" }
+
+# Handle 404s and redirect to index for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
+
+# Set cache headers for assets to improve performance
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Set cache headers for HTML to ensure fresh content
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
