@@ -1,0 +1,100 @@
+8:22:07 PM: Netlify Build                                                 
+8:22:07 PM: ────────────────────────────────────────────────────────────────
+8:22:07 PM: ​
+8:22:07 PM: ❯ Version
+8:22:07 PM:   @netlify/build 32.0.0
+8:22:07 PM: ​
+8:22:07 PM: ❯ Flags
+8:22:07 PM:   accountId: 67a179408afa7f33b6f5863c
+8:22:07 PM:   baseRelDir: true
+8:22:07 PM:   buildId: 67fef80d866137000844b825
+8:22:07 PM:   deployId: 67fef80d866137000844b827
+8:22:08 PM: ​
+8:22:08 PM: ❯ Current directory
+8:22:08 PM:   /opt/build/repo
+8:22:08 PM: ​
+8:22:08 PM: ❯ Config file
+8:22:08 PM:   /opt/build/repo/netlify.toml
+8:22:08 PM: ​
+8:22:08 PM: ❯ Context
+8:22:08 PM:   production
+8:22:08 PM: ​
+8:22:08 PM: ❯ Installing extensions
+8:22:08 PM:    - user-agent-blocker
+8:22:09 PM: ​
+8:22:09 PM: ❯ Loading extensions
+8:22:09 PM:    - user-agent-blocker
+8:22:10 PM: ​
+8:22:10 PM: build.command from netlify.toml                               
+8:22:10 PM: ────────────────────────────────────────────────────────────────
+8:22:10 PM: ​
+8:22:10 PM: $ npm run build && node netlify-postbuild.js
+8:22:10 PM: > rest-express@1.0.0 build
+8:22:10 PM: > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+8:22:11 PM: vite v5.4.14 building for production...
+8:22:11 PM: transforming...
+8:22:11 PM: Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+8:22:11 PM:   npx update-browserslist-db@latest
+8:22:11 PM:   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+8:22:13 PM: ✓ 1700 modules transformed.
+8:22:13 PM: rendering chunks...
+8:22:13 PM: computing gzip size...
+8:22:13 PM: ../dist/public/index.html                           1.85 kB │ gzip:   0.75 kB
+8:22:13 PM: ../dist/public/assets/stove-DxWlumGv.webp          65.68 kB
+8:22:13 PM: ../dist/public/assets/dryer-D9VKGRCf.webp          69.02 kB
+8:22:13 PM: ../dist/public/assets/washer-DL6oSEGr.webp         87.07 kB
+8:22:13 PM: ../dist/public/assets/dishwasher-B27CI9SX.webp     90.59 kB
+8:22:13 PM: ../dist/public/assets/refrigerator-Bhk_DxzI.webp  141.46 kB
+8:22:13 PM: ../dist/public/assets/oven-DiDL5OqG.webp          293.08 kB
+8:22:13 PM: ../dist/public/assets/index-CGK_oS_w.css           84.01 kB │ gzip:  13.51 kB
+8:22:13 PM: ../dist/public/assets/index-DTawmcqX.js           392.06 kB │ gzip: 113.05 kB
+8:22:13 PM: ✓ built in 2.75s
+8:22:13 PM:   dist/index.js  7.9kb
+8:22:13 PM: ⚡ Done in 3ms
+8:22:14 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+8:22:14 PM: file:///opt/build/repo/netlify-postbuild.js:1
+8:22:14 PM: const fs = require('fs');
+8:22:14 PM:            ^
+8:22:14 PM: ReferenceError: require is not defined in ES module scope, you can use import instead
+8:22:14 PM: This file is being treated as an ES module because it has a '.js' file extension and '/opt/build/repo/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+8:22:14 PM:     at file:///opt/build/repo/netlify-postbuild.js:1:12
+8:22:14 PM:     at ModuleJob.run (node:internal/modules/esm/module_job:263:25)
+8:22:14 PM:     at async ModuleLoader.import (node:internal/modules/esm/loader:540:24)
+8:22:14 PM:     at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+8:22:14 PM: Node.js v20.19.0
+8:22:14 PM: ​
+8:22:14 PM: "build.command" failed                                        
+8:22:14 PM: ────────────────────────────────────────────────────────────────
+8:22:14 PM: ​
+8:22:14 PM:   Error message
+8:22:14 PM:   Command failed with exit code 1: npm run build && node netlify-postbuild.js (https://ntl.fyi/exit-code-1)
+8:22:14 PM: ​
+8:22:14 PM:   Error location
+8:22:14 PM:   In build.command from netlify.toml:
+8:22:14 PM:   npm run build && node netlify-postbuild.js
+8:22:14 PM: ​
+8:22:14 PM:   Resolved config
+8:22:14 PM:   build:
+8:22:14 PM:     command: npm run build && node netlify-postbuild.js
+8:22:14 PM:     commandOrigin: config
+8:22:14 PM:     environment:
+8:22:14 PM:       - NODE_VERSION
+8:22:14 PM:     publish: /opt/build/repo/dist/public
+8:22:14 PM:     publishOrigin: config
+8:22:14 PM:   headers:
+8:22:14 PM:     - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.html
+      values:
+        Cache-Control: public, max-age=0, must-revalidate
+  headersOrigin: config
+  redirects:
+    - force: true
+      from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+8:22:14 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+8:22:14 PM: Failing build: Failed to build site
+8:22:14 PM: Finished processing build request in 29.667s

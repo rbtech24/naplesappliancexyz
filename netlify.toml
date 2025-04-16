@@ -2,7 +2,7 @@
 
 # Enable asset optimization
 [build]
-  command = "npm run build && node netlify-postbuild.js"
+  command = "npm run build"
   publish = "dist/public"
   environment = { NODE_VERSION = "20" }
 
