@@ -114,7 +114,7 @@ If the issue seems serious or potentially dangerous, always recommend profession
 
       // Send request to Claude
       const response = await anthropic.messages.create({
-        model: "claude-3-7-sonnet-20250219", // the newest Anthropic model is "claude-3-7-sonnet-20250219" which was released February 24, 2025
+        model: "claude-3-opus-20240229", // Using an available model
         max_tokens: 1000,
         system: systemPrompt,
         messages: [
@@ -122,10 +122,17 @@ If the issue seems serious or potentially dangerous, always recommend profession
         ],
       });
 
-      // Safely get the response text, handling different response formats
-      const responseText = typeof response.content[0].text === 'string' 
-        ? response.content[0].text 
-        : JSON.stringify(response.content[0]);
+      // Get the response content safely
+      let responseText = "";
+      if (response.content && response.content.length > 0) {
+        const content = response.content[0];
+        // Handle different content types that Claude might return
+        if ('text' in content) {
+          responseText = content.text as string;
+        } else {
+          responseText = "I'm sorry, I couldn't process that request. Please try asking in a different way.";
+        }
+      }
 
       res.status(200).json({
         success: true,

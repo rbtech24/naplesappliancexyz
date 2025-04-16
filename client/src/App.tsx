@@ -11,11 +11,13 @@ import DishwasherRepair from "@/pages/services/DishwasherRepair";
 import DryerRepair from "@/pages/services/DryerRepair";
 import MicrowaveRepair from "@/pages/services/MicrowaveRepair";
 import RouteHandler from "@/components/RouteHandler";
+import { ChatbotButton } from "@/components/home/ChatbotButton";
 
 // New Pages
 import AboutUsPage from "@/pages/AboutUs";
 import TestimonialsPage from "@/pages/Testimonials";
 import ServiceAreasPage from "@/pages/ServiceAreas";
+import TroubleshootingGuide from "@/pages/TroubleshootingGuide";
 
 /**
  * Main application component with client-side routing
@@ -34,6 +36,7 @@ function App() {
         <Route path="/about" component={AboutUsPage} />
         <Route path="/testimonials" component={TestimonialsPage} />
         <Route path="/service-areas" component={ServiceAreasPage} />
+        <Route path="/troubleshooting" component={TroubleshootingGuide} />
         <Route path="/services/refrigerator" component={RefrigeratorRepair} />
         <Route path="/services/washer" component={WasherRepair} />
         <Route path="/services/oven" component={OvenRepair} />
@@ -45,6 +48,7 @@ function App() {
       
       {/* UI Components */}
       <MobileCallBar />
+      <ChatbotButton />
       <Toaster />
     </>
   );
