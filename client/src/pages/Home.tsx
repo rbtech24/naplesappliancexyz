@@ -12,6 +12,7 @@ import FAQ from "@/components/home/FAQ";
 import CTASection from "@/components/home/CTASection";
 import ContactSection from "@/components/home/ContactSection";
 import ServiceAreaMap from "@/components/home/ServiceAreaMap";
+import { MaintenanceReminderWidget } from "@/components/home/MaintenanceReminderWidget";
 
 const Home = () => {
   return (
@@ -24,6 +25,14 @@ const Home = () => {
         <BrandsBanner />
         <ProcessSection />
         <AboutUs />
+        
+        {/* Seasonal Maintenance Reminder Widget */}
+        <div className="container mx-auto px-4 py-12 mb-6">
+          <div className="max-w-sm mx-auto">
+            <MaintenanceReminderWidget />
+          </div>
+        </div>
+        
         <Testimonials />
         <ServiceAreas />
         <FAQ />

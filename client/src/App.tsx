@@ -18,6 +18,7 @@ import AboutUsPage from "@/pages/AboutUs";
 import TestimonialsPage from "@/pages/Testimonials";
 import ServiceAreasPage from "@/pages/ServiceAreas";
 import TroubleshootingGuide from "@/pages/TroubleshootingGuide";
+import MaintenanceGuide from "@/pages/MaintenanceGuide";
 
 /**
  * Main application component with client-side routing
@@ -37,6 +38,7 @@ function App() {
         <Route path="/testimonials" component={TestimonialsPage} />
         <Route path="/service-areas" component={ServiceAreasPage} />
         <Route path="/troubleshooting" component={TroubleshootingGuide} />
+        <Route path="/maintenance" component={MaintenanceGuide} />
         <Route path="/services/refrigerator" component={RefrigeratorRepair} />
         <Route path="/services/washer" component={WasherRepair} />
         <Route path="/services/oven" component={OvenRepair} />

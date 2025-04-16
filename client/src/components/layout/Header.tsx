@@ -77,6 +77,12 @@ const Header = () => {
               </Link>
             </li>
             
+            <li className="flex items-center">
+              <Link href="/maintenance" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+                Maintenance Guide
+              </Link>
+            </li>
+            
             {/* Services Dropdown */}
             <li className="relative flex items-center" ref={servicesDropdownRef}>
               <button 
@@ -149,6 +155,12 @@ const Header = () => {
           <li className="py-2">
             <Link href="/troubleshooting" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Troubleshooting
+            </Link>
+          </li>
+          
+          <li className="py-2">
+            <Link href="/maintenance" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+              Maintenance Guide
             </Link>
           </li>
           
