@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
 import { MessageCircle, Send, Bot, Loader2 } from 'lucide-react';
-import { apiRequest } from '@/lib/queryClient';
+
 import { cn } from '@/lib/utils';
 
 interface Message {
