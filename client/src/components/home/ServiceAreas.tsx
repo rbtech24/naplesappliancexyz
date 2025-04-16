@@ -41,11 +41,33 @@ const ServiceAreas = () => {
 
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
-            <img 
-              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&h=600" 
-              alt="Collier County, Florida map" 
-              className="rounded-lg shadow-lg"
-            />
+            <div className="rounded-lg shadow-lg overflow-hidden h-[400px]">
+              {mapReady && (
+                <MapContainer 
+                  center={naplesCoordinates}
+                  zoom={10} 
+                  style={{ height: '100%', width: '100%' }}
+                  className="z-0"
+                >
+                  <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  />
+                  <Marker position={naplesCoordinates}>
+                    <Popup>Naples, FL - Our Base of Operations</Popup>
+                  </Marker>
+                  <Marker position={marcoIslandCoordinates}>
+                    <Popup>Marco Island - Servicing this area</Popup>
+                  </Marker>
+                  <Marker position={bonitaSpringsCoordinates}>
+                    <Popup>Bonita Springs - Servicing this area</Popup>
+                  </Marker>
+                  <Marker position={evergladesCoordinates}>
+                    <Popup>Everglades City - Servicing this area</Popup>
+                  </Marker>
+                </MapContainer>
+              )}
+            </div>
             
             <div className="mt-8 bg-gray-50 p-6 rounded-lg shadow">
               <h3 className="text-xl font-heading font-bold mb-4">Why Choose Naples Appliance Repair?</h3>
