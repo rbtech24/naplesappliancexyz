@@ -1,8 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { serviceAreas } from "@/lib/serviceData";
 import { siteMetadata } from "@/lib/seo";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import { useEffect, useState } from 'react';
+import L from 'leaflet';
+
+// Fix for Leaflet default marker icon issue
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+});
+
+// Coordinates for key locations in Collier County
+const naplesCoordinates: [number, number] = [26.1420, -81.7948]; // Naples, FL
+const marcoIslandCoordinates: [number, number] = [25.9424, -81.7007]; // Marco Island
+const bonitaSpringsCoordinates: [number, number] = [26.3398, -81.7787]; // Bonita Springs
+const evergladesCoordinates: [number, number] = [25.8696, -81.3803]; // Everglades City
 
 const ServiceAreas = () => {
+  const [mapReady, setMapReady] = useState(false);
+
+  useEffect(() => {
+    // Set map as ready after component mounts
+    setMapReady(true);
+  }, []);
   return (
     <section id="service-areas" className="py-16 bg-white">
       <div className="container mx-auto px-4">
