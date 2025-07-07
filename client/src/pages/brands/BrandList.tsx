@@ -170,9 +170,6 @@ export default function BrandList() {
                   Call (239) 230-2100
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
-                <Link href="/#contact">Schedule Service</Link>
-              </Button>
             </div>
           </div>
         </section>

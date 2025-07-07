@@ -13,6 +13,7 @@ import CTASection from "@/components/home/CTASection";
 import ContactSection from "@/components/home/ContactSection";
 import ServiceAreaMap from "@/components/home/ServiceAreaMap";
 import { MaintenanceReminderWidget } from "@/components/home/MaintenanceReminderWidget";
+import BlogSection from "@/components/home/BlogSection";
 
 const Home = () => {
   return (
@@ -33,6 +34,7 @@ const Home = () => {
           </div>
         </div>
         
+        <BlogSection />
         <Testimonials />
         <ServiceAreas />
         <FAQ />

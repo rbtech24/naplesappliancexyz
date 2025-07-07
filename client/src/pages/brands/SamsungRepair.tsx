@@ -71,9 +71,6 @@ export default function SamsungRepair() {
                     Call (239) 230-2100
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary" asChild>
-                  <Link href="/#contact">Schedule Samsung Repair</Link>
-                </Button>
               </div>
             </div>
           </div>
