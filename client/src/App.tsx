@@ -73,23 +73,20 @@ import MaytagRepair from "@/pages/brands/MaytagRepair";
 import BoschRepair from "@/pages/brands/BoschRepair";
 import KitchenAidRepair from "@/pages/brands/KitchenAidRepair";
 import FrigidaireRepair from "@/pages/brands/FrigidaireRepair";
-// Temporarily commenting out additional brand pages for immediate deployment fix
-// import ElectroluxRepair from "@/pages/brands/ElectroluxRepair";
-// import KenmoreRepair from "@/pages/brands/KenmoreRepair";
-// import SubZeroRepair from "@/pages/brands/SubZeroRepair";
-// import WolfRepair from "@/pages/brands/WolfRepair";
-// import VikingRepair from "@/pages/brands/VikingRepair";
-// import ThermadorRepair from "@/pages/brands/ThermadorRepair";
-// import MieleRepair from "@/pages/brands/MieleRepair";
-// Temporarily commenting out some brand pages to fix Netlify build timeout
-// Will re-enable in smaller batches after deployment is fixed
-// import FisherPaykelRepair from "@/pages/brands/FisherPaykelRepair";
-// import DacorRepair from "@/pages/brands/DacorRepair";
-// import JennAirRepair from "@/pages/brands/JennAirRepair";
-// import AskoRepair from "@/pages/brands/AskoRepair";
-// import SpeedQueenRepair from "@/pages/brands/SpeedQueenRepair";
-// import AmanaRepair from "@/pages/brands/AmanaRepair";
-// import HaierRepair from "@/pages/brands/HaierRepair";
+import ElectroluxRepair from "@/pages/brands/ElectroluxRepair";
+import KenmoreRepair from "@/pages/brands/KenmoreRepair";
+import SubZeroRepair from "@/pages/brands/SubZeroRepair";
+import WolfRepair from "@/pages/brands/WolfRepair";
+import VikingRepair from "@/pages/brands/VikingRepair";
+import ThermadorRepair from "@/pages/brands/ThermadorRepair";
+import MieleRepair from "@/pages/brands/MieleRepair";
+import FisherPaykelRepair from "@/pages/brands/FisherPaykelRepair";
+import DacorRepair from "@/pages/brands/DacorRepair";
+import JennAirRepair from "@/pages/brands/JennAirRepair";
+import AskoRepair from "@/pages/brands/AskoRepair";
+import SpeedQueenRepair from "@/pages/brands/SpeedQueenRepair";
+import AmanaRepair from "@/pages/brands/AmanaRepair";
+import HaierRepair from "@/pages/brands/HaierRepair";
 
 /**
  * Main application component with client-side routing
@@ -183,22 +180,20 @@ function App() {
         <Route path="/brands/bosch" component={BoschRepair} />
         <Route path="/brands/kitchenaid" component={KitchenAidRepair} />
         <Route path="/brands/frigidaire" component={FrigidaireRepair} />
-        {/* Temporarily commenting out additional brand routes for immediate deployment fix */}
-        {/* <Route path="/brands/electrolux" component={ElectroluxRepair} />
+        <Route path="/brands/electrolux" component={ElectroluxRepair} />
         <Route path="/brands/kenmore" component={KenmoreRepair} />
         <Route path="/brands/sub-zero" component={SubZeroRepair} />
         <Route path="/brands/wolf" component={WolfRepair} />
         <Route path="/brands/viking" component={VikingRepair} />
         <Route path="/brands/thermador" component={ThermadorRepair} />
-        <Route path="/brands/miele" component={MieleRepair} /> */}
-        {/* Temporarily commenting out some brand routes to fix Netlify build timeout */}
-        {/* <Route path="/brands/fisher-paykel" component={FisherPaykelRepair} />
+        <Route path="/brands/miele" component={MieleRepair} />
+        <Route path="/brands/fisher-paykel" component={FisherPaykelRepair} />
         <Route path="/brands/dacor" component={DacorRepair} />
         <Route path="/brands/jennair" component={JennAirRepair} />
         <Route path="/brands/asko" component={AskoRepair} />
         <Route path="/brands/speed-queen" component={SpeedQueenRepair} />
         <Route path="/brands/amana" component={AmanaRepair} />
-        <Route path="/brands/haier" component={HaierRepair} /> */}
+        <Route path="/brands/haier" component={HaierRepair} />
         <Route component={NotFound} />
       </Switch>
       

@@ -1,6 +1,6 @@
 [build]
   publish = "dist/public"
-  command = "node deploy-minimal.js || npm run build"
+  command = "npm run build"
 
 # SEO-friendly service page redirects
 [[redirects]]
