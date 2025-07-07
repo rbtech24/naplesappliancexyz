@@ -59,6 +59,9 @@ import CommonWinterApplianceProblems from "@/pages/blog/CommonWinterAppliancePro
 import QuickFixesRefrigeratorLeaks from "@/pages/blog/QuickFixesRefrigeratorLeaks";
 import ApplianceEnergyEfficiencyWinter from "@/pages/blog/ApplianceEnergyEfficiencyWinter";
 import ApplianceLifespanMaximizingGuide from "@/pages/blog/ApplianceLifespanMaximizingGuide";
+import SnowbirdAppliancePreparation from "@/pages/blog/SnowbirdAppliancePreparation";
+import VacationRentalApplianceMaintenance from "@/pages/blog/VacationRentalApplianceMaintenance";
+import SecondHomeApplianceWinterization from "@/pages/blog/SecondHomeApplianceWinterization";
 
 // Brand Pages
 import BrandList from "@/pages/brands/BrandList";
@@ -142,6 +145,9 @@ function App() {
         <Route path="/blog/quick-fixes-common-naples-refrigerator-leaks" component={QuickFixesRefrigeratorLeaks} />
         <Route path="/blog/maximizing-appliance-energy-efficiency-naples-winter" component={ApplianceEnergyEfficiencyWinter} />
         <Route path="/blog/maximizing-appliance-lifespan-southwest-florida-climate" component={ApplianceLifespanMaximizingGuide} />
+        <Route path="/blog/snowbird-appliance-preparation-naples-second-homes" component={SnowbirdAppliancePreparation} />
+        <Route path="/blog/vacation-rental-appliance-maintenance-naples" component={VacationRentalApplianceMaintenance} />
+        <Route path="/blog/second-home-appliance-winterization-naples-snowbirds" component={SecondHomeApplianceWinterization} />
         
         {/* Legacy blog URL redirects */}
         <Route path="/blog/1" component={BlogPost1} />
