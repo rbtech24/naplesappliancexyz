@@ -33,6 +33,12 @@ import BlogPost6 from "@/pages/blog/BlogPost6";
 // Brand Pages
 import BrandList from "@/pages/brands/BrandList";
 import SamsungRepair from "@/pages/brands/SamsungRepair";
+import LGRepair from "@/pages/brands/LGRepair";
+import WhirlpoolRepair from "@/pages/brands/WhirlpoolRepair";
+import GERepair from "@/pages/brands/GERepair";
+import MaytagRepair from "@/pages/brands/MaytagRepair";
+import BoschRepair from "@/pages/brands/BoschRepair";
+import KitchenAidRepair from "@/pages/brands/KitchenAidRepair";
 
 /**
  * Main application component with client-side routing
@@ -70,6 +76,14 @@ function App() {
         <Route path="/services/microwave" component={MicrowaveRepair} />
         
         <Route path="/blog" component={Blog} />
+        <Route path="/blog/ultimate-guide-extending-appliance-lifespan-southwest-florida" component={BlogPost1} />
+        <Route path="/blog/top-10-common-appliance-problems-naples-homeowners" component={BlogPost2} />
+        <Route path="/blog/beat-naples-heat-high-temperatures-affect-refrigerator" component={BlogPost3} />
+        <Route path="/blog/top-5-signs-washer-needs-repair-naples-guide" component={BlogPost4} />
+        <Route path="/blog/naples-ac-not-cooling-appliance-troubleshooting" component={BlogPost5} />
+        <Route path="/blog/protecting-appliances-naples-rainy-season-flood-humidity" component={BlogPost6} />
+        
+        {/* Legacy blog URL redirects */}
         <Route path="/blog/1" component={BlogPost1} />
         <Route path="/blog/2" component={BlogPost2} />
         <Route path="/blog/3" component={BlogPost3} />
@@ -78,6 +92,12 @@ function App() {
         <Route path="/blog/6" component={BlogPost6} />
         <Route path="/brands" component={BrandList} />
         <Route path="/brands/samsung" component={SamsungRepair} />
+        <Route path="/brands/lg" component={LGRepair} />
+        <Route path="/brands/whirlpool" component={WhirlpoolRepair} />
+        <Route path="/brands/ge" component={GERepair} />
+        <Route path="/brands/maytag" component={MaytagRepair} />
+        <Route path="/brands/bosch" component={BoschRepair} />
+        <Route path="/brands/kitchenaid" component={KitchenAidRepair} />
         <Route component={NotFound} />
       </Switch>
       

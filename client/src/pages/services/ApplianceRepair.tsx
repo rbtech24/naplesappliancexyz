@@ -9,20 +9,32 @@ import Footer from '@/components/layout/Footer';
 import { Link } from 'wouter';
 
 const applianceTypes = [
-  { name: 'Refrigerators', icon: '❄️', description: 'All makes and models, ice makers, water dispensers' },
-  { name: 'Washing Machines', icon: '🌊', description: 'Front-load, top-load, stackable units' },
-  { name: 'Dryers', icon: '🔥', description: 'Electric, gas, ventless models' },
-  { name: 'Dishwashers', icon: '🍽️', description: 'Built-in, portable, drawer-style' },
-  { name: 'Ovens & Ranges', icon: '🔥', description: 'Electric, gas, induction cooktops' },
-  { name: 'Microwaves', icon: '⚡', description: 'Countertop, over-range, built-in' },
-  { name: 'Garbage Disposals', icon: '🗑️', description: 'All horsepower ratings and brands' },
-  { name: 'Water Heaters', icon: '💧', description: 'Tank, tankless, electric, gas' }
+  { name: 'Refrigerators', icon: '❄️', description: 'All makes and models, ice makers, water dispensers', link: '/services/refrigerator-repair' },
+  { name: 'Washing Machines', icon: '🌊', description: 'Front-load, top-load, stackable units', link: '/services/washing-machine-repair' },
+  { name: 'Dryers', icon: '🔥', description: 'Electric, gas, ventless models', link: '/services/dryer-repair' },
+  { name: 'Dishwashers', icon: '🍽️', description: 'Built-in, portable, drawer-style', link: '/services/dishwasher-repair' },
+  { name: 'Ovens & Ranges', icon: '🔥', description: 'Electric, gas, induction cooktops', link: '/services/oven-repair' },
+  { name: 'Microwaves', icon: '⚡', description: 'Countertop, over-range, built-in', link: '/services/microwave-repair' },
+  { name: 'Garbage Disposals', icon: '🗑️', description: 'All horsepower ratings and brands', link: '/services/appliance-repair' },
+  { name: 'Water Heaters', icon: '💧', description: 'Tank, tankless, electric, gas', link: '/services/appliance-repair' }
 ];
 
 const majorBrands = [
-  'Samsung', 'LG', 'Whirlpool', 'GE', 'Maytag', 'Bosch',
-  'KitchenAid', 'Frigidaire', 'Electrolux', 'Kenmore',
-  'Sub-Zero', 'Wolf', 'Viking', 'Thermador', 'Miele'
+  { name: 'Samsung', link: '/brands/samsung' },
+  { name: 'LG', link: '/brands/lg' },
+  { name: 'Whirlpool', link: '/brands/whirlpool' },
+  { name: 'GE', link: '/brands/ge' },
+  { name: 'Maytag', link: '/brands/maytag' },
+  { name: 'Bosch', link: '/brands/bosch' },
+  { name: 'KitchenAid', link: '/brands/kitchenaid' },
+  { name: 'Frigidaire', link: '/brands/frigidaire' },
+  { name: 'Electrolux', link: '/brands/electrolux' },
+  { name: 'Kenmore', link: '/brands/kenmore' },
+  { name: 'Sub-Zero', link: '/brands/sub-zero' },
+  { name: 'Wolf', link: '/brands/wolf' },
+  { name: 'Viking', link: '/brands/viking' },
+  { name: 'Thermador', link: '/brands/thermador' },
+  { name: 'Miele', link: '/brands/miele' }
 ];
 
 const serviceFeatures = [
@@ -140,15 +152,17 @@ export default function ApplianceRepair() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {applianceTypes.map((appliance, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader className="text-center">
-                    <div className="text-4xl mb-2">{appliance.icon}</div>
-                    <CardTitle className="text-lg">{appliance.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground text-sm text-center">{appliance.description}</p>
-                  </CardContent>
-                </Card>
+                <Link key={index} href={appliance.link}>
+                  <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                    <CardHeader className="text-center">
+                      <div className="text-4xl mb-2">{appliance.icon}</div>
+                      <CardTitle className="text-lg">{appliance.name}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground text-sm text-center">{appliance.description}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -166,9 +180,11 @@ export default function ApplianceRepair() {
             
             <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
               {majorBrands.map((brand, index) => (
-                <Card key={index} className="p-4 text-center hover:shadow-md transition-shadow">
-                  <p className="font-medium text-sm">{brand}</p>
-                </Card>
+                <Link key={index} href={brand.link}>
+                  <Card className="p-4 text-center hover:shadow-md transition-shadow cursor-pointer">
+                    <p className="font-medium text-sm">{brand.name}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
             

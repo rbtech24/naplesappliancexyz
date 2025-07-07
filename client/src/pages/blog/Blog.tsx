@@ -22,7 +22,7 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    id: '1',
+    id: 'ultimate-guide-extending-appliance-lifespan-southwest-florida',
     title: 'The Ultimate Guide to Extending Your Appliance Lifespan in Southwest Florida',
     excerpt: 'Learn essential maintenance tips and techniques to maximize the life of your home appliances in Naples humid climate.',
     content: '',
@@ -33,7 +33,7 @@ const blogPosts: BlogPost[] = [
     tags: ['maintenance', 'tips', 'longevity', 'florida']
   },
   {
-    id: '2',
+    id: 'top-10-common-appliance-problems-naples-homeowners',
     title: 'Top 10 Common Appliance Problems Naples Homeowners Face',
     excerpt: 'Discover the most frequent appliance issues in Southwest Florida and how to prevent them before they become costly repairs.',
     content: '',
@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     tags: ['problems', 'solutions', 'naples', 'repair']
   },
   {
-    id: '3',
+    id: 'beat-naples-heat-high-temperatures-affect-refrigerator',
     title: 'Beat the Naples Heat: How High Temperatures Affect Your Refrigerator',
     excerpt: 'Learn how Naples extreme heat impacts your refrigerator performance and discover expert strategies to keep your appliance running efficiently.',
     content: '',
@@ -55,7 +55,7 @@ const blogPosts: BlogPost[] = [
     tags: ['heat', 'refrigerator', 'naples', 'temperature']
   },
   {
-    id: '4',
+    id: 'top-5-signs-washer-needs-repair-naples-guide',
     title: 'Top 5 Signs Your Washer Needs Repair (Naples Homeowner Guide)',
     excerpt: 'Recognize the early warning signs that your washing machine needs professional repair and prevent costly breakdowns.',
     content: '',
@@ -66,7 +66,7 @@ const blogPosts: BlogPost[] = [
     tags: ['washer', 'repair', 'signs', 'maintenance']
   },
   {
-    id: '5',
+    id: 'naples-ac-not-cooling-appliance-troubleshooting',
     title: 'Why Your Naples AC Won\'t Cool: Is It Really the Appliance or Something Else?',
     excerpt: 'Comprehensive troubleshooting guide to distinguish between appliance issues and other factors affecting your home cooling.',
     content: '',
@@ -77,7 +77,7 @@ const blogPosts: BlogPost[] = [
     tags: ['ac', 'cooling', 'troubleshooting', 'hvac']
   },
   {
-    id: '6',
+    id: 'protecting-appliances-naples-rainy-season-flood-humidity',
     title: 'Protecting Appliances During Naples\' Rainy Season: Flood & Humidity Prevention',
     excerpt: 'Essential strategies to protect your home appliances during Naples intense rainy season with flood and humidity prevention.',
     content: '',

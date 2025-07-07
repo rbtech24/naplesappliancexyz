@@ -23,7 +23,24 @@ Professional website for Naples Appliance Repair (http://naplesappliancerepair.x
 - Customer testimonials and service area information
 
 ## Recent Changes
-**January 7, 2025**
+**January 7, 2025 - Latest Updates**
+✓ Updated blog URLs to SEO-friendly titles instead of numbers:
+  - /blog/ultimate-guide-extending-appliance-lifespan-southwest-florida
+  - /blog/top-10-common-appliance-problems-naples-homeowners
+  - /blog/beat-naples-heat-high-temperatures-affect-refrigerator
+  - /blog/top-5-signs-washer-needs-repair-naples-guide
+  - /blog/naples-ac-not-cooling-appliance-troubleshooting
+  - /blog/protecting-appliances-naples-rainy-season-flood-humidity
+✓ Created 6 major brand repair pages: LG, Whirlpool, GE, Maytag, Bosch, KitchenAid
+✓ Added blog section to homepage with 3 featured article cards
+✓ Made all appliance types on Appliance Repair page clickable links to service pages
+✓ Made all brand names clickable links to brand pages across the site
+✓ Removed schedule service buttons from ALL hero sections (keeping only phone buttons)
+✓ Updated footer service links to use new SEO-friendly URLs
+✓ Added complete routing for all brand pages with proper imports
+✓ Added legacy URL redirects to maintain existing blog links
+
+**January 7, 2025 - Earlier**
 ✓ Created "Appliance Repair" landing page and added to services navigation
 ✓ Fixed HTTP to HTTPS redirect issue in Google Search Console via netlify.toml
 ✓ Updated all service URLs to be SEO-friendly:

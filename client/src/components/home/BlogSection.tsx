@@ -17,7 +17,7 @@ interface BlogPost {
 
 const featuredBlogPosts: BlogPost[] = [
   {
-    id: '1',
+    id: 'ultimate-guide-extending-appliance-lifespan-southwest-florida',
     title: 'The Ultimate Guide to Extending Your Appliance Lifespan in Southwest Florida',
     excerpt: 'Learn essential maintenance tips and techniques to maximize the life of your home appliances in Naples humid climate.',
     author: 'Naples Appliance Repair Team',
@@ -27,7 +27,7 @@ const featuredBlogPosts: BlogPost[] = [
     tags: ['maintenance', 'tips', 'longevity', 'florida']
   },
   {
-    id: '2',
+    id: 'top-10-common-appliance-problems-naples-homeowners',
     title: 'Top 10 Common Appliance Problems Naples Homeowners Face',
     excerpt: 'Discover the most frequent appliance issues in Southwest Florida and how to prevent them before they become costly repairs.',
     author: 'Naples Appliance Repair Team',
@@ -37,7 +37,7 @@ const featuredBlogPosts: BlogPost[] = [
     tags: ['problems', 'solutions', 'naples', 'repair']
   },
   {
-    id: '3',
+    id: 'beat-naples-heat-high-temperatures-affect-refrigerator',
     title: 'Beat the Naples Heat: How High Temperatures Affect Your Refrigerator',
     excerpt: 'Learn how Naples extreme heat impacts your refrigerator performance and discover expert strategies to keep your appliance running efficiently.',
     author: 'Naples Appliance Repair Team',
