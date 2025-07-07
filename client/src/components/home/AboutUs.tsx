@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import collierCountyMapUrl from "@assets/collier county_1751920913997.png";
 
 const AboutUs = () => {
   const features = [
@@ -23,9 +24,6 @@ const AboutUs = () => {
       description: "On all parts and labor"
     }
   ];
-
-  // Map of Collier County replacing the 4 images
-  const collierCountyMapUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Map_of_Florida_highlighting_Collier_County.svg/1200px-Map_of_Florida_highlighting_Collier_County.svg.png";
 
   return (
     <section id="about" className="py-16 bg-white">

@@ -24,7 +24,10 @@ Professional website for Naples Appliance Repair (http://naplesappliancerepair.x
 
 ## Recent Changes
 **January 7, 2025 - Latest Updates**
-✓ Created 14 additional comprehensive blog posts for SEO content strategy:
+✓ Removed appliance repair card from "Our Appliance Repair Services" section on home page
+✓ Updated About Naples Appliance Repair section with provided Collier County image
+✓ Fixed blog listing page to display all created posts properly
+✓ Created 17 additional comprehensive blog posts for SEO content strategy:
   - Dishwasher Not Draining (August content)
   - Appliance Service Frequency (August content)
   - Energy-Efficient Upgrades Analysis (August content)
@@ -39,6 +42,8 @@ Professional website for Naples Appliance Repair (http://naplesappliancerepair.x
   - Strange Appliance Noises Guide (October content)
   - Common Oven Problems (October content)
   - Holiday Appliance Prep (October content)
+  - Dishwasher Maximizing Performance (November content)
+  - Smart Appliances Analysis (November content)
 ✓ Updated blog URLs to SEO-friendly titles instead of numbers for all posts
 ✓ Created 6 major brand repair pages: LG, Whirlpool, GE, Maytag, Bosch, KitchenAid
 ✓ Added blog section to homepage with 3 featured article cards

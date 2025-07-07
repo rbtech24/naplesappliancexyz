@@ -8,18 +8,6 @@ import dishwasherImg from "../assets/dishwasher.webp";
 
 export const services: Service[] = [
   {
-    id: "appliance-repair",
-    title: "Appliance Repair",
-    description: "Professional repair services for all home appliances. From refrigerators to washers, we fix them all with expert precision and same-day service.",
-    image: refrigeratorImg, // Using refrigerator image as general appliance representation
-    icon: "fa-tools",
-    features: [
-      "All major appliance brands",
-      "Same-day service available",
-      "Licensed & insured technicians"
-    ]
-  },
-  {
     id: "refrigerator-repair",
     title: "Refrigerator Repair",
     description: "Our expert technicians can diagnose and fix issues with all refrigerator types including French door, side-by-side, top and bottom freezer models.",

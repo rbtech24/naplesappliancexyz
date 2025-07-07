@@ -86,6 +86,182 @@ const blogPosts: BlogPost[] = [
     readTime: '14 min read',
     category: 'Storm Protection',
     tags: ['flood', 'humidity', 'protection', 'storm']
+  },
+  {
+    id: 'dishwasher-not-draining-most-common-causes-naples-homes',
+    title: 'Why Your Dishwasher Won\'t Drain: Most Common Causes in Naples Homes',
+    excerpt: 'Discover the most frequent dishwasher drainage problems Naples homeowners face and learn expert solutions.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2025-01-01',
+    readTime: '10 min read',
+    category: 'Troubleshooting',
+    tags: ['dishwasher', 'drainage', 'troubleshooting', 'naples']
+  },
+  {
+    id: 'how-often-service-major-appliances-naples',
+    title: 'How Often Should You Service Major Appliances in Naples?',
+    excerpt: 'Learn the optimal maintenance schedule for your home appliances in Southwest Florida\'s challenging climate.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-30',
+    readTime: '9 min read',
+    category: 'Maintenance',
+    tags: ['maintenance', 'schedule', 'appliances', 'naples']
+  },
+  {
+    id: 'energy-efficient-appliance-upgrades-naples-homeowners-save',
+    title: 'Energy-Efficient Appliance Upgrades: How Naples Homeowners Save',
+    excerpt: 'Comprehensive analysis of energy-efficient appliance benefits and cost savings for Southwest Florida homes.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-29',
+    readTime: '11 min read',
+    category: 'Energy Efficiency',
+    tags: ['energy', 'upgrades', 'savings', 'naples']
+  },
+  {
+    id: 'why-diy-appliance-repair-fails-naples-pros-know',
+    title: 'Why DIY Appliance Repair Often Fails: What Naples Pros Know',
+    excerpt: 'Understanding why professional appliance repair is often more cost-effective than DIY attempts.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-28',
+    readTime: '8 min read',
+    category: 'Professional Tips',
+    tags: ['diy', 'professional', 'repair', 'naples']
+  },
+  {
+    id: 'avoiding-mold-florida-appliances-washer-dishwasher-more',
+    title: 'Avoiding Mold in Florida Appliances: Washer, Dishwasher & More',
+    excerpt: 'Expert strategies to prevent mold growth in appliances during Florida\'s humid climate.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-27',
+    readTime: '12 min read',
+    category: 'Maintenance',
+    tags: ['mold', 'humidity', 'florida', 'prevention']
+  },
+  {
+    id: 'back-to-school-easy-appliance-maintenance-busy-naples-families',
+    title: 'Back-to-School: Easy Appliance Maintenance for Busy Naples Families',
+    excerpt: 'Simple maintenance routines to keep your appliances running smoothly during the busy school season.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-26',
+    readTime: '9 min read',
+    category: 'Seasonal Tips',
+    tags: ['maintenance', 'family', 'school', 'naples']
+  },
+  {
+    id: 'appliance-lifespans-when-time-replace-vs-repair',
+    title: 'Appliance Lifespans: When It\'s Time to Replace vs. Repair',
+    excerpt: 'Expert guidance on making the repair vs. replacement decision for major home appliances.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-25',
+    readTime: '10 min read',
+    category: 'Decision Guide',
+    tags: ['lifespan', 'replacement', 'repair', 'guidance']
+  },
+  {
+    id: 'what-do-when-naples-dryer-stops-heating',
+    title: 'What to Do When Your Naples Dryer Stops Heating',
+    excerpt: 'Comprehensive troubleshooting guide for dryer heating problems in Southwest Florida homes.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-24',
+    readTime: '11 min read',
+    category: 'Troubleshooting',
+    tags: ['dryer', 'heating', 'troubleshooting', 'naples']
+  },
+  {
+    id: 'garbage-disposal-troubleshooting-common-naples-issues',
+    title: 'Garbage Disposal Troubleshooting: Common Naples Issues',
+    excerpt: 'Learn to diagnose and resolve the most frequent garbage disposal problems in Southwest Florida.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-23',
+    readTime: '8 min read',
+    category: 'Troubleshooting',
+    tags: ['garbage disposal', 'troubleshooting', 'naples', 'kitchen']
+  },
+  {
+    id: 'hurricane-prep-protecting-appliances-naples',
+    title: 'Hurricane Prep: Protecting Your Appliances in Naples',
+    excerpt: 'Essential guide to protecting appliances during hurricane season in Naples, FL.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-22',
+    readTime: '12 min read',
+    category: 'Storm Protection',
+    tags: ['hurricane', 'protection', 'naples', 'preparation']
+  },
+  {
+    id: 'appliance-warranties-what-naples-residents-need-know',
+    title: 'Appliance Warranties: What Naples Residents Need to Know',
+    excerpt: 'Complete guide to appliance warranties in Naples, FL and what\'s covered in Southwest Florida.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-21',
+    readTime: '11 min read',
+    category: 'Consumer Guide',
+    tags: ['warranties', 'coverage', 'naples', 'protection']
+  },
+  {
+    id: 'why-not-ignore-strange-noises-appliances',
+    title: 'Why You Shouldn\'t Ignore Strange Noises from Appliances',
+    excerpt: 'Learn what strange appliance noises mean and when to call for repair in Naples, FL.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-20',
+    readTime: '9 min read',
+    category: 'Troubleshooting',
+    tags: ['noises', 'diagnosis', 'appliances', 'warning signs']
+  },
+  {
+    id: 'most-common-oven-problems-naples-homes',
+    title: 'The Most Common Oven Problems in Naples Homes',
+    excerpt: 'Learn about the most frequent oven issues Naples homeowners face and how to troubleshoot them.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-19',
+    readTime: '10 min read',
+    category: 'Troubleshooting',
+    tags: ['oven', 'problems', 'naples', 'troubleshooting']
+  },
+  {
+    id: 'preparing-kitchen-appliances-holiday-cooking',
+    title: 'Preparing Your Kitchen Appliances for Holiday Cooking',
+    excerpt: 'Get your Naples kitchen ready for holiday entertaining with essential appliance prep tips.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-18',
+    readTime: '11 min read',
+    category: 'Holiday Tips',
+    tags: ['holiday', 'cooking', 'preparation', 'kitchen']
+  },
+  {
+    id: 'how-get-most-out-naples-dishwasher',
+    title: 'How to Get the Most Out of Your Naples Dishwasher',
+    excerpt: 'Maximize your dishwasher\'s performance in Naples, FL with expert tips for hard water and maintenance.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-17',
+    readTime: '9 min read',
+    category: 'Optimization',
+    tags: ['dishwasher', 'performance', 'naples', 'tips']
+  },
+  {
+    id: 'smart-appliances-worth-it-southwest-florida',
+    title: 'Smart Appliances: Are They Worth It in Southwest Florida?',
+    excerpt: 'Evaluate smart appliance benefits for Naples, FL homes and whether connected features make sense.',
+    content: '',
+    author: 'Naples Appliance Repair Team',
+    date: '2024-12-16',
+    readTime: '12 min read',
+    category: 'Technology',
+    tags: ['smart appliances', 'technology', 'naples', 'evaluation']
   }
 ];
 
