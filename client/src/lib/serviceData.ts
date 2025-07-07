@@ -20,7 +20,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "refrigerator",
+    id: "refrigerator-repair",
     title: "Refrigerator Repair",
     description: "Our expert technicians can diagnose and fix issues with all refrigerator types including French door, side-by-side, top and bottom freezer models.",
     image: refrigeratorImg,
@@ -32,8 +32,8 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "washer",
-    title: "Washer Repair",
+    id: "washing-machine-repair",
+    title: "Washing Machine Repair",
     description: "We service all types of washing machines including front load, top load, HE models, and smart washers from all major brands.",
     image: washerImg,
     icon: "fa-tshirt",
@@ -44,7 +44,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "dryer",
+    id: "dryer-repair",
     title: "Dryer Repair",
     description: "Our technicians are experts at repairing both gas and electric dryers of all makes and models, including ventless and heat pump dryers.",
     image: dryerImg,
@@ -56,7 +56,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "oven",
+    id: "oven-repair",
     title: "Oven & Range Repair",
     description: "Our specialists repair all oven types including conventional, convection, gas, electric, and dual-fuel ranges from all major brands.",
     image: ovenImg,
@@ -68,7 +68,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "dishwasher",
+    id: "dishwasher-repair",
     title: "Dishwasher Repair",
     description: "We diagnose and repair all dishwasher problems on standard and smart models from all the leading manufacturers.",
     image: dishwasherImg,
@@ -80,7 +80,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: "microwave",
+    id: "microwave-repair",
     title: "Microwave Repair",
     description: "We service all types of microwaves including countertop, over-the-range, built-in, and drawer models from all major brands.",
     image: stoveImg,

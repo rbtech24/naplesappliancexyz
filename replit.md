@@ -26,6 +26,10 @@ Professional website for Naples Appliance Repair (http://naplesappliancerepair.x
 **January 7, 2025**
 ✓ Created "Appliance Repair" landing page and added to services navigation
 ✓ Fixed HTTP to HTTPS redirect issue in Google Search Console via netlify.toml
+✓ Updated all service URLs to be SEO-friendly:
+  - /services/refrigerator-repair (instead of /refrigerator)
+  - /services/washing-machine-repair (instead of /washer)
+  - /services/dryer-repair, /services/oven-repair, etc.
 ✓ Created comprehensive brand pages structure:
   - Brand list page with 35+ major appliance manufacturers
   - Samsung repair page with detailed service information

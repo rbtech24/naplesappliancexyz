@@ -2,6 +2,37 @@
   publish = "dist"
   command = "npm run build"
 
+# SEO-friendly service page redirects
+[[redirects]]
+  from = "/services/refrigerator"
+  to = "/services/refrigerator-repair"
+  status = 301
+
+[[redirects]]
+  from = "/services/washer"
+  to = "/services/washing-machine-repair"
+  status = 301
+
+[[redirects]]
+  from = "/services/dryer"
+  to = "/services/dryer-repair"
+  status = 301
+
+[[redirects]]
+  from = "/services/oven"
+  to = "/services/oven-repair"
+  status = 301
+
+[[redirects]]
+  from = "/services/dishwasher"
+  to = "/services/dishwasher-repair"
+  status = 301
+
+[[redirects]]
+  from = "/services/microwave"
+  to = "/services/microwave-repair"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

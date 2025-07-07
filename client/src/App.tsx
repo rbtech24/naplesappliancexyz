@@ -54,12 +54,21 @@ function App() {
         <Route path="/troubleshooting" component={TroubleshootingGuide} />
         <Route path="/maintenance" component={MaintenanceGuide} />
         <Route path="/services/appliance-repair" component={ApplianceRepair} />
+        <Route path="/services/refrigerator-repair" component={RefrigeratorRepair} />
+        <Route path="/services/washing-machine-repair" component={WasherRepair} />
+        <Route path="/services/oven-repair" component={OvenRepair} />
+        <Route path="/services/dishwasher-repair" component={DishwasherRepair} />
+        <Route path="/services/dryer-repair" component={DryerRepair} />
+        <Route path="/services/microwave-repair" component={MicrowaveRepair} />
+        
+        {/* Legacy URL redirects for SEO */}
         <Route path="/services/refrigerator" component={RefrigeratorRepair} />
         <Route path="/services/washer" component={WasherRepair} />
         <Route path="/services/oven" component={OvenRepair} />
         <Route path="/services/dishwasher" component={DishwasherRepair} />
         <Route path="/services/dryer" component={DryerRepair} />
         <Route path="/services/microwave" component={MicrowaveRepair} />
+        
         <Route path="/blog" component={Blog} />
         <Route path="/blog/1" component={BlogPost1} />
         <Route path="/blog/2" component={BlogPost2} />
