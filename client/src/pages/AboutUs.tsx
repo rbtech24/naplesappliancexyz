@@ -3,6 +3,7 @@ import { siteMetadata } from "@/lib/seo";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import appliancesImage from "@assets/electronics_1751919715540.png";
 
 const AboutUsPage = () => {
   // Features list for display in the About section
@@ -29,8 +30,8 @@ const AboutUsPage = () => {
     }
   ];
 
-  // Map of Collier County
-  const collierCountyMapUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Map_of_Florida_highlighting_Collier_County.svg/1200px-Map_of_Florida_highlighting_Collier_County.svg.png";
+  // Professional appliance repair image for Our Story section
+  const applianceRepairImageUrl = appliancesImage;
 
   return (
     <>
@@ -44,13 +45,13 @@ const AboutUsPage = () => {
         <meta property="og:description" content="Learn about Naples Appliance Repair, the trusted name in appliance repair in Naples, FL with over 15 years of experience serving Southwest Florida." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${siteMetadata.siteUrl}/about`} />
-        <meta property="og:image" content={collierCountyMapUrl} />
+        <meta property="og:image" content={applianceRepairImageUrl} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`About Us | ${siteMetadata.title}`} />
         <meta name="twitter:description" content="Learn about Naples Appliance Repair, the trusted name in appliance repair in Naples, FL with over 15 years of experience serving Southwest Florida." />
-        <meta name="twitter:image" content={collierCountyMapUrl} />
+        <meta name="twitter:image" content={applianceRepairImageUrl} />
         
         {/* Canonical */}
         <link rel="canonical" href={`${siteMetadata.siteUrl}/about`} />
@@ -160,9 +161,9 @@ const AboutUsPage = () => {
               <div className="lg:w-1/2">
                 <div className="flex justify-center items-center h-full">
                   <img 
-                    src={collierCountyMapUrl} 
-                    alt="Map of Collier County, Florida" 
-                    className="rounded-lg shadow-md w-full h-auto"
+                    src={applianceRepairImageUrl} 
+                    alt="Professional appliance repair services including washers, dryers, refrigerators, and ovens" 
+                    className="rounded-lg shadow-lg w-full h-auto border border-gray-200"
                   />
                 </div>
               </div>
