@@ -10,6 +10,7 @@ import OvenRepair from "@/pages/services/OvenRepair";
 import DishwasherRepair from "@/pages/services/DishwasherRepair";
 import DryerRepair from "@/pages/services/DryerRepair";
 import MicrowaveRepair from "@/pages/services/MicrowaveRepair";
+import ApplianceRepair from "@/pages/services/ApplianceRepair";
 import RouteHandler from "@/components/RouteHandler";
 import { ChatbotButton } from "@/components/home/ChatbotButton";
 
@@ -28,6 +29,10 @@ import BlogPost3 from "@/pages/blog/BlogPost3";
 import BlogPost4 from "@/pages/blog/BlogPost4";
 import BlogPost5 from "@/pages/blog/BlogPost5";
 import BlogPost6 from "@/pages/blog/BlogPost6";
+
+// Brand Pages
+import BrandList from "@/pages/brands/BrandList";
+import SamsungRepair from "@/pages/brands/SamsungRepair";
 
 /**
  * Main application component with client-side routing
@@ -48,6 +53,7 @@ function App() {
         <Route path="/service-areas" component={ServiceAreasPage} />
         <Route path="/troubleshooting" component={TroubleshootingGuide} />
         <Route path="/maintenance" component={MaintenanceGuide} />
+        <Route path="/services/appliance-repair" component={ApplianceRepair} />
         <Route path="/services/refrigerator" component={RefrigeratorRepair} />
         <Route path="/services/washer" component={WasherRepair} />
         <Route path="/services/oven" component={OvenRepair} />
@@ -61,6 +67,8 @@ function App() {
         <Route path="/blog/4" component={BlogPost4} />
         <Route path="/blog/5" component={BlogPost5} />
         <Route path="/blog/6" component={BlogPost6} />
+        <Route path="/brands" component={BrandList} />
+        <Route path="/brands/samsung" component={SamsungRepair} />
         <Route component={NotFound} />
       </Switch>
       

@@ -1,26 +1,41 @@
-# Netlify configuration for Naples Appliance Repair SPA
-
-# Build configuration
 [build]
-  command = "npm run build && node netlify-build.mjs"
-  publish = "dist/public"
-  environment = { NODE_VERSION = "20" }
+  publish = "dist"
+  command = "npm run build"
 
-# SPA routing - redirect all requests to index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Force HTTPS redirects
+[[redirects]]
+  from = "http://naplesappliancerepair.xyz/*"
+  to = "https://naplesappliancerepair.xyz/:splat"
+  status = 301
   force = true
 
-# Cache configuration for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "http://www.naplesappliancerepair.xyz/*"
+  to = "https://naplesappliancerepair.xyz/:splat"
+  status = 301
+  force = true
 
-# Cache configuration for HTML files
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.naplesappliancerepair.xyz/*"
+  to = "https://naplesappliancerepair.xyz/:splat"
+  status = 301
+  force = true
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Security headers
 [[headers]]
-  for = "/*.html"
+  for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
