@@ -6,7 +6,7 @@ import { siteMetadata } from '@/lib/seo';
 import { CheckCircle, Phone, Star, Wrench, Clock, Shield } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { ScrollLink } from '@/utils/scrollToTop';
+
 
 const commonIssues = [
   'DishDrawer cleaning cycle problems',

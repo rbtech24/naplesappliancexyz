@@ -80,13 +80,15 @@ import WolfRepair from "@/pages/brands/WolfRepair";
 import VikingRepair from "@/pages/brands/VikingRepair";
 import ThermadorRepair from "@/pages/brands/ThermadorRepair";
 import MieleRepair from "@/pages/brands/MieleRepair";
-import FisherPaykelRepair from "@/pages/brands/FisherPaykelRepair";
-import DacorRepair from "@/pages/brands/DacorRepair";
-import JennAirRepair from "@/pages/brands/JennAirRepair";
-import AskoRepair from "@/pages/brands/AskoRepair";
-import SpeedQueenRepair from "@/pages/brands/SpeedQueenRepair";
-import AmanaRepair from "@/pages/brands/AmanaRepair";
-import HaierRepair from "@/pages/brands/HaierRepair";
+// Temporarily commenting out some brand pages to fix Netlify build timeout
+// Will re-enable in smaller batches after deployment is fixed
+// import FisherPaykelRepair from "@/pages/brands/FisherPaykelRepair";
+// import DacorRepair from "@/pages/brands/DacorRepair";
+// import JennAirRepair from "@/pages/brands/JennAirRepair";
+// import AskoRepair from "@/pages/brands/AskoRepair";
+// import SpeedQueenRepair from "@/pages/brands/SpeedQueenRepair";
+// import AmanaRepair from "@/pages/brands/AmanaRepair";
+// import HaierRepair from "@/pages/brands/HaierRepair";
 
 /**
  * Main application component with client-side routing
@@ -187,13 +189,14 @@ function App() {
         <Route path="/brands/viking" component={VikingRepair} />
         <Route path="/brands/thermador" component={ThermadorRepair} />
         <Route path="/brands/miele" component={MieleRepair} />
-        <Route path="/brands/fisher-paykel" component={FisherPaykelRepair} />
+        {/* Temporarily commenting out some brand routes to fix Netlify build timeout */}
+        {/* <Route path="/brands/fisher-paykel" component={FisherPaykelRepair} />
         <Route path="/brands/dacor" component={DacorRepair} />
         <Route path="/brands/jennair" component={JennAirRepair} />
         <Route path="/brands/asko" component={AskoRepair} />
         <Route path="/brands/speed-queen" component={SpeedQueenRepair} />
         <Route path="/brands/amana" component={AmanaRepair} />
-        <Route path="/brands/haier" component={HaierRepair} />
+        <Route path="/brands/haier" component={HaierRepair} /> */}
         <Route component={NotFound} />
       </Switch>
       
