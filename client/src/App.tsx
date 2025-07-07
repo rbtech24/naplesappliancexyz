@@ -30,6 +30,24 @@ import BlogPost4 from "@/pages/blog/BlogPost4";
 import BlogPost5 from "@/pages/blog/BlogPost5";
 import BlogPost6 from "@/pages/blog/BlogPost6";
 
+// Additional Blog Posts
+import DishwasherNotDraining from "@/pages/blog/DishwasherNotDraining";
+import ApplianceServiceFrequency from "@/pages/blog/ApplianceServiceFrequency";
+import EnergyEfficientUpgrades from "@/pages/blog/EnergyEfficientUpgrades";
+import DIYRepairFailures from "@/pages/blog/DIYRepairFailures";
+import MoldPrevention from "@/pages/blog/MoldPrevention";
+import BackToSchoolMaintenance from "@/pages/blog/BackToSchoolMaintenance";
+import RepairVsReplace from "@/pages/blog/RepairVsReplace";
+import DryerNotHeating from "@/pages/blog/DryerNotHeating";
+import GarbageDisposalTroubleshooting from "@/pages/blog/GarbageDisposalTroubleshooting";
+import HurricanePrep from "@/pages/blog/HurricanePrep";
+import ApplianceWarranties from "@/pages/blog/ApplianceWarranties";
+import StrangeApplianceNoises from "@/pages/blog/StrangeApplianiceNoises";
+import CommonOvenProblems from "@/pages/blog/CommonOvenProblems";
+import HolidayAppliancePrep from "@/pages/blog/HolidayAppliancePrep";
+import DishwasherMaximizing from "@/pages/blog/DishwasherMaximizing";
+import SmartAppliances from "@/pages/blog/SmartAppliances";
+
 // Brand Pages
 import BrandList from "@/pages/brands/BrandList";
 import SamsungRepair from "@/pages/brands/SamsungRepair";
@@ -82,6 +100,24 @@ function App() {
         <Route path="/blog/top-5-signs-washer-needs-repair-naples-guide" component={BlogPost4} />
         <Route path="/blog/naples-ac-not-cooling-appliance-troubleshooting" component={BlogPost5} />
         <Route path="/blog/protecting-appliances-naples-rainy-season-flood-humidity" component={BlogPost6} />
+        
+        {/* Additional Blog Posts */}
+        <Route path="/blog/dishwasher-not-draining-most-common-causes-naples-homes" component={DishwasherNotDraining} />
+        <Route path="/blog/how-often-service-major-appliances-naples" component={ApplianceServiceFrequency} />
+        <Route path="/blog/energy-efficient-appliance-upgrades-naples-homeowners-save" component={EnergyEfficientUpgrades} />
+        <Route path="/blog/why-diy-appliance-repair-fails-naples-pros-know" component={DIYRepairFailures} />
+        <Route path="/blog/avoiding-mold-florida-appliances-washer-dishwasher-more" component={MoldPrevention} />
+        <Route path="/blog/back-to-school-easy-appliance-maintenance-busy-naples-families" component={BackToSchoolMaintenance} />
+        <Route path="/blog/appliance-lifespans-when-time-replace-vs-repair" component={RepairVsReplace} />
+        <Route path="/blog/what-do-when-naples-dryer-stops-heating" component={DryerNotHeating} />
+        <Route path="/blog/garbage-disposal-troubleshooting-common-naples-issues" component={GarbageDisposalTroubleshooting} />
+        <Route path="/blog/hurricane-prep-protecting-appliances-naples" component={HurricanePrep} />
+        <Route path="/blog/appliance-warranties-what-naples-residents-need-know" component={ApplianceWarranties} />
+        <Route path="/blog/why-not-ignore-strange-noises-appliances" component={StrangeApplianceNoises} />
+        <Route path="/blog/most-common-oven-problems-naples-homes" component={CommonOvenProblems} />
+        <Route path="/blog/preparing-kitchen-appliances-holiday-cooking" component={HolidayAppliancePrep} />
+        <Route path="/blog/how-get-most-out-naples-dishwasher" component={DishwasherMaximizing} />
+        <Route path="/blog/smart-appliances-worth-it-southwest-florida" component={SmartAppliances} />
         
         {/* Legacy blog URL redirects */}
         <Route path="/blog/1" component={BlogPost1} />
