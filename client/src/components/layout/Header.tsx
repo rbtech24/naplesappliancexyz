@@ -141,11 +141,7 @@ const Header = () => {
                 Service Areas
               </Link>
             </li>
-            <li className="flex items-center">
-              <Link href={isHomePage ? "#contact" : "/#contact"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
-                Contact
-              </Link>
-            </li>
+
           </ul>
         </div>
       </nav>
