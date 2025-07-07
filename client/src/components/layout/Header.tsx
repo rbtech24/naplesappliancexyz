@@ -101,7 +101,18 @@ const Header = () => {
               {isServicesDropdownOpen && (
                 <div className="absolute left-0 top-full mt-2 w-64 bg-white rounded-md shadow-lg z-20 animate-fade-in-up">
                   <div className="p-2">
-                    {services.map((service) => (
+                    {/* Add the Appliance Repair landing page first */}
+                    <Link 
+                      href="/services/appliance-repair"
+                      className="flex items-center p-3 text-gray-700 hover:bg-gray-100 hover:text-[#0056b3] rounded-md font-medium border-b border-gray-100"
+                      onClick={() => setIsServicesDropdownOpen(false)}
+                    >
+                      <i className="fas fa-tools text-[#ff6b00] mr-3"></i>
+                      <span>Appliance Repair</span>
+                    </Link>
+                    
+                    {/* Then show specific appliance services */}
+                    {services.slice(1).map((service) => (
                       <Link 
                         key={service.id}
                         href={`/services/${service.id}`}
@@ -117,7 +128,7 @@ const Header = () => {
                       className="flex items-center p-3 text-gray-700 hover:bg-gray-100 hover:text-[#0056b3] rounded-md"
                       onClick={() => setIsServicesDropdownOpen(false)}
                     >
-                      <i className="fas fa-tools text-[#ff6b00] mr-3"></i>
+                      <i className="fas fa-eye text-[#ff6b00] mr-3"></i>
                       <span>View All Services</span>
                     </Link>
                   </div>
