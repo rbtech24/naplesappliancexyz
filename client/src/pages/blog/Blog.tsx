@@ -329,13 +329,44 @@ export default function Blog() {
         <title>Appliance Repair Blog | Expert Tips & Guides | {siteMetadata.title}</title>
         <meta 
           name="description" 
-          content="Expert appliance repair tips, maintenance guides, and troubleshooting advice for Naples homeowners. Stay informed with our professional insights."
+          content="Expert appliance repair tips, maintenance guides, and troubleshooting advice for Naples homeowners. Stay informed with our professional insights and local expertise."
         />
+        <meta name="keywords" content="appliance repair blog, Naples FL appliance tips, appliance maintenance guides, refrigerator repair advice, washer repair tips, appliance troubleshooting, Naples appliance experts" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content={`Appliance Repair Blog | Expert Tips & Guides | ${siteMetadata.title}`} />
-        <meta 
-          property="og:description" 
-          content="Expert appliance repair tips, maintenance guides, and troubleshooting advice for Naples homeowners. Stay informed with our professional insights."
-        />
+        <meta property="og:description" content="Expert appliance repair tips, maintenance guides, and troubleshooting advice for Naples homeowners. Stay informed with our professional insights." />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}/blog`} />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`Appliance Repair Blog | Expert Tips & Guides | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content="Expert appliance repair tips, maintenance guides, and troubleshooting advice for Naples homeowners." />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteMetadata.siteUrl}/blog`} />
+        
+        {/* Blog Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Naples Appliance Repair Blog",
+            "description": "Expert appliance repair tips, maintenance guides, and troubleshooting advice for Naples homeowners",
+            "url": `${siteMetadata.siteUrl}/blog`,
+            "publisher": {
+              "@type": "Organization",
+              "name": "Naples Appliance Repair",
+              "url": siteMetadata.siteUrl,
+              "logo": `${siteMetadata.siteUrl}/logo.png`
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "Naples Appliance Repair Team"
+            }
+          })}
+        </script>
       </Helmet>
 
       <main>

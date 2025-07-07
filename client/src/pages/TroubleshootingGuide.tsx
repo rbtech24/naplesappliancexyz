@@ -90,13 +90,57 @@ export default function TroubleshootingGuide() {
         <title>Appliance Troubleshooting Guide | {siteMetadata.title}</title>
         <meta 
           name="description" 
-          content="Get expert troubleshooting help for common appliance problems. Our AI assistant can help diagnose issues with refrigerators, washers, dryers, dishwashers, ovens and more."
+          content="Get expert troubleshooting help for common appliance problems. Our AI assistant can help diagnose issues with refrigerators, washers, dryers, dishwashers, ovens and more in Naples, FL."
         />
+        <meta name="keywords" content="appliance troubleshooting, refrigerator problems, washer issues, dryer repair, Naples FL appliance help, DIY appliance fixes, appliance diagnostics" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content={`Appliance Troubleshooting Guide | ${siteMetadata.title}`} />
-        <meta 
-          property="og:description" 
-          content="Get expert troubleshooting help for common appliance problems. Our AI assistant can help diagnose issues with refrigerators, washers, dryers, dishwashers, ovens and more."
-        />
+        <meta property="og:description" content="Get expert troubleshooting help for common appliance problems. Our AI assistant can help diagnose issues with refrigerators, washers, dryers, dishwashers, ovens and more." />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}/troubleshooting-guide`} />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`Appliance Troubleshooting Guide | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content="Get expert troubleshooting help for common appliance problems." />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteMetadata.siteUrl}/troubleshooting-guide`} />
+        
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Why is my refrigerator not cooling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common causes include dirty condenser coils, faulty thermostat, or compressor issues. Check that vents are clear and temperature settings are correct."
+                }
+              },
+              {
+                "@type": "Question", 
+                "name": "Why won't my washer drain?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This is often caused by a clogged drain hose, lint buildup, or a faulty drain pump. Check for blockages and ensure the drain hose is properly positioned."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is my dryer not heating?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Check the lint filter and exhaust vent for blockages. For gas dryers, ensure gas supply is on. For electric dryers, check circuit breakers and heating elements."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <main>

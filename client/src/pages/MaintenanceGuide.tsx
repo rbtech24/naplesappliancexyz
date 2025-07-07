@@ -43,8 +43,81 @@ export default function MaintenanceGuide() {
         <title>Seasonal Appliance Maintenance Guide | {siteMetadata.title}</title>
         <meta 
           name="description" 
-          content="Keep your home appliances running efficiently all year with our seasonal maintenance guides. Learn what maintenance tasks to perform during each season."
+          content="Keep your home appliances running efficiently all year with our seasonal maintenance guides. Learn what maintenance tasks to perform during each season in Naples, FL."
         />
+        <meta name="keywords" content="appliance maintenance guide, seasonal maintenance, Naples FL appliance care, refrigerator maintenance, washer maintenance, dryer maintenance, oven maintenance, preventive care" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`Seasonal Appliance Maintenance Guide | ${siteMetadata.title}`} />
+        <meta property="og:description" content="Keep your home appliances running efficiently all year with our seasonal maintenance guides. Learn what maintenance tasks to perform during each season in Naples, FL." />
+        <meta property="og:url" content={`${siteMetadata.siteUrl}/maintenance-guide`} />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`Seasonal Appliance Maintenance Guide | ${siteMetadata.title}`} />
+        <meta name="twitter:description" content="Keep your home appliances running efficiently all year with our seasonal maintenance guides." />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteMetadata.siteUrl}/maintenance-guide`} />
+        
+        {/* How-To Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "Seasonal Appliance Maintenance Guide",
+            "description": "Learn how to maintain your home appliances throughout the year in Naples, Florida",
+            "image": `${siteMetadata.siteUrl}/maintenance-guide-image.jpg`,
+            "estimatedCost": {
+              "@type": "MonetaryAmount",
+              "currency": "USD",
+              "value": "0"
+            },
+            "supply": [
+              {
+                "@type": "HowToSupply",
+                "name": "Cleaning supplies"
+              },
+              {
+                "@type": "HowToSupply", 
+                "name": "Replacement filters"
+              }
+            ],
+            "tool": [
+              {
+                "@type": "HowToTool",
+                "name": "Vacuum cleaner"
+              },
+              {
+                "@type": "HowToTool",
+                "name": "Cleaning cloths"
+              }
+            ],
+            "step": [
+              {
+                "@type": "HowToStep",
+                "name": "Spring Maintenance",
+                "text": "Clean appliance coils, replace filters, check door seals"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Summer Preparation",
+                "text": "Prepare appliances for high usage during peak season"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Fall Inspection",
+                "text": "Inspect for wear and schedule professional maintenance"
+              },
+              {
+                "@type": "HowToStep",
+                "name": "Winter Care",
+                "text": "Ensure appliances handle increased usage efficiently"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <main>
