@@ -48,6 +48,18 @@ import HolidayAppliancePrep from "@/pages/blog/HolidayAppliancePrep";
 import DishwasherMaximizing from "@/pages/blog/DishwasherMaximizing";
 import SmartAppliances from "@/pages/blog/SmartAppliances";
 
+// Latest Blog Posts (December 2024 - January 2025)
+import HolidayApplianceFailures from "@/pages/blog/HolidayApplianceFailures";
+import YearEndApplianceMaintenanceChecklist from "@/pages/blog/YearEndApplianceMaintenanceChecklist";
+import EmergencyApplianceRepairHolidays from "@/pages/blog/EmergencyApplianceRepairHolidays";
+import OvenTakesForeverToHeatUp from "@/pages/blog/OvenTakesForeverToHeatUp";
+import NewYearNewAppliances from "@/pages/blog/NewYearNewAppliances";
+import RealCostDelayingApplianceRepairs from "@/pages/blog/RealCostDelayingApplianceRepairs";
+import CommonWinterApplianceProblems from "@/pages/blog/CommonWinterApplianceProblems";
+import QuickFixesRefrigeratorLeaks from "@/pages/blog/QuickFixesRefrigeratorLeaks";
+import ApplianceEnergyEfficiencyWinter from "@/pages/blog/ApplianceEnergyEfficiencyWinter";
+import ApplianceLifespanMaximizingGuide from "@/pages/blog/ApplianceLifespanMaximizingGuide";
+
 // Brand Pages
 import BrandList from "@/pages/brands/BrandList";
 import SamsungRepair from "@/pages/brands/SamsungRepair";
@@ -118,6 +130,18 @@ function App() {
         <Route path="/blog/preparing-kitchen-appliances-holiday-cooking" component={HolidayAppliancePrep} />
         <Route path="/blog/how-get-most-out-naples-dishwasher" component={DishwasherMaximizing} />
         <Route path="/blog/smart-appliances-worth-it-southwest-florida" component={SmartAppliances} />
+        
+        {/* Latest Blog Posts (December 2024 - January 2025) */}
+        <Route path="/blog/holiday-appliance-failures-what-to-do-before-guests-arrive" component={HolidayApplianceFailures} />
+        <Route path="/blog/year-end-appliance-maintenance-checklist-naples-residents" component={YearEndApplianceMaintenanceChecklist} />
+        <Route path="/blog/emergency-appliance-repair-naples-holidays" component={EmergencyApplianceRepairHolidays} />
+        <Route path="/blog/oven-takes-forever-to-heat-up-naples-troubleshooting" component={OvenTakesForeverToHeatUp} />
+        <Route path="/blog/new-year-new-appliances-repair-vs-replace" component={NewYearNewAppliances} />
+        <Route path="/blog/real-cost-delaying-appliance-repairs" component={RealCostDelayingApplianceRepairs} />
+        <Route path="/blog/common-winter-appliance-problems-naples-florida" component={CommonWinterApplianceProblems} />
+        <Route path="/blog/quick-fixes-common-naples-refrigerator-leaks" component={QuickFixesRefrigeratorLeaks} />
+        <Route path="/blog/maximizing-appliance-energy-efficiency-naples-winter" component={ApplianceEnergyEfficiencyWinter} />
+        <Route path="/blog/maximizing-appliance-lifespan-southwest-florida-climate" component={ApplianceLifespanMaximizingGuide} />
         
         {/* Legacy blog URL redirects */}
         <Route path="/blog/1" component={BlogPost1} />

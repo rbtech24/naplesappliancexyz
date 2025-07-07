@@ -7,6 +7,7 @@ import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ScrollLink } from '@/utils/scrollToTop';
+import { Link } from 'wouter';
 
 interface BlogPost {
   id: string;
