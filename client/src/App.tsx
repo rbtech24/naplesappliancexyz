@@ -73,13 +73,14 @@ import MaytagRepair from "@/pages/brands/MaytagRepair";
 import BoschRepair from "@/pages/brands/BoschRepair";
 import KitchenAidRepair from "@/pages/brands/KitchenAidRepair";
 import FrigidaireRepair from "@/pages/brands/FrigidaireRepair";
-import ElectroluxRepair from "@/pages/brands/ElectroluxRepair";
-import KenmoreRepair from "@/pages/brands/KenmoreRepair";
-import SubZeroRepair from "@/pages/brands/SubZeroRepair";
-import WolfRepair from "@/pages/brands/WolfRepair";
-import VikingRepair from "@/pages/brands/VikingRepair";
-import ThermadorRepair from "@/pages/brands/ThermadorRepair";
-import MieleRepair from "@/pages/brands/MieleRepair";
+// Temporarily commenting out additional brand pages for immediate deployment fix
+// import ElectroluxRepair from "@/pages/brands/ElectroluxRepair";
+// import KenmoreRepair from "@/pages/brands/KenmoreRepair";
+// import SubZeroRepair from "@/pages/brands/SubZeroRepair";
+// import WolfRepair from "@/pages/brands/WolfRepair";
+// import VikingRepair from "@/pages/brands/VikingRepair";
+// import ThermadorRepair from "@/pages/brands/ThermadorRepair";
+// import MieleRepair from "@/pages/brands/MieleRepair";
 // Temporarily commenting out some brand pages to fix Netlify build timeout
 // Will re-enable in smaller batches after deployment is fixed
 // import FisherPaykelRepair from "@/pages/brands/FisherPaykelRepair";
@@ -182,13 +183,14 @@ function App() {
         <Route path="/brands/bosch" component={BoschRepair} />
         <Route path="/brands/kitchenaid" component={KitchenAidRepair} />
         <Route path="/brands/frigidaire" component={FrigidaireRepair} />
-        <Route path="/brands/electrolux" component={ElectroluxRepair} />
+        {/* Temporarily commenting out additional brand routes for immediate deployment fix */}
+        {/* <Route path="/brands/electrolux" component={ElectroluxRepair} />
         <Route path="/brands/kenmore" component={KenmoreRepair} />
         <Route path="/brands/sub-zero" component={SubZeroRepair} />
         <Route path="/brands/wolf" component={WolfRepair} />
         <Route path="/brands/viking" component={VikingRepair} />
         <Route path="/brands/thermador" component={ThermadorRepair} />
-        <Route path="/brands/miele" component={MieleRepair} />
+        <Route path="/brands/miele" component={MieleRepair} /> */}
         {/* Temporarily commenting out some brand routes to fix Netlify build timeout */}
         {/* <Route path="/brands/fisher-paykel" component={FisherPaykelRepair} />
         <Route path="/brands/dacor" component={DacorRepair} />
