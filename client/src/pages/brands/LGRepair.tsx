@@ -6,7 +6,7 @@ import { siteMetadata } from '@/lib/seo';
 import { Wrench, Phone, CheckCircle, Star, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 const lgAppliances = [
   { name: 'LG Refrigerators', models: 'French Door, Side-by-Side, Bottom Freezer, InstaView', issues: 'Ice maker problems, linear compressor issues, door seal problems' },

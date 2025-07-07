@@ -6,7 +6,7 @@ import { siteMetadata } from '@/lib/seo';
 import { Wrench, Phone, CheckCircle, Star, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 const maytagAppliances = [
   { name: 'Maytag Refrigerators', models: 'French Door, Side-by-Side, Top Freezer, Bottom Freezer', issues: 'Ice maker problems, temperature fluctuations, door seal issues' },

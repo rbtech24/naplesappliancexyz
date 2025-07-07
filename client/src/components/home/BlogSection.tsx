@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 interface BlogPost {
   id: string;
@@ -91,9 +91,9 @@ const BlogSection = () => {
                   </div>
                 </div>
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={`/blog/${post.id}`} className="flex items-center justify-center">
+                  <ScrollLink href={`/blog/${post.id}`} className="flex items-center justify-center">
                     Read More <ArrowRight className="h-3 w-3 ml-1" />
-                  </Link>
+                  </ScrollLink>
                 </Button>
               </CardContent>
             </Card>
@@ -102,9 +102,9 @@ const BlogSection = () => {
         
         <div className="text-center">
           <Button size="lg" asChild>
-            <Link href="/blog" className="flex items-center">
+            <ScrollLink href="/blog" className="flex items-center">
               View All Articles <ArrowRight className="h-4 w-4 ml-2" />
-            </Link>
+            </ScrollLink>
           </Button>
         </div>
       </div>

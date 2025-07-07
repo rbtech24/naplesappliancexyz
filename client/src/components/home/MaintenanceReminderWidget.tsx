@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, Sun, Thermometer, Fan, Snowflake, ArrowRight } from 'lucide-react';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 type Season = 'spring' | 'summer' | 'fall' | 'winter';
 
@@ -79,18 +79,16 @@ export function MaintenanceReminderWidget() {
         </div>
         
         <div className="flex justify-between gap-2">
-          <Button variant="outline" size="sm" className="flex-1">
-            <Link href="/maintenance">
-              <span className="flex items-center justify-center w-full gap-1">
-                View All Tips
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+          <Button variant="outline" size="sm" className="flex-1" asChild>
+            <ScrollLink href="/maintenance" className="flex items-center justify-center w-full gap-1">
+              View All Tips
+              <ArrowRight className="h-4 w-4" />
+            </ScrollLink>
           </Button>
-          <Button size="sm" className="flex-1">
-            <Link href="/#contact">
+          <Button size="sm" className="flex-1" asChild>
+            <a href="/#contact">
               <span className="w-full">Schedule Service</span>
-            </Link>
+            </a>
           </Button>
         </div>
       </CardContent>

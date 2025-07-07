@@ -6,7 +6,7 @@ import { siteMetadata } from '@/lib/seo';
 import { Wrench, Phone, CheckCircle, Star, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 const boschAppliances = [
   { name: 'Bosch Refrigerators', models: 'Counter-Depth, French Door, Bottom Freezer, Compact', issues: 'Temperature control, ice maker problems, door seal issues' },

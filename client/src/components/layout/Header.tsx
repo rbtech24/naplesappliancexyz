@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "wouter";
+import { ScrollLink } from "@/utils/scrollToTop";
 import { Button } from "@/components/ui/button";
 import { siteMetadata } from "@/lib/seo";
 import { services } from "@/lib/serviceData";
@@ -37,11 +38,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/" className="flex items-center">
+          <ScrollLink href="/" className="flex items-center">
             <span className="text-[#0056b3] text-3xl font-heading font-bold">Naples</span>
             <span className="text-[#00a0e9] text-3xl font-heading font-bold">Appliance</span>
             <span className="text-[#ff6b00] ml-1 text-3xl font-heading font-bold">Repair</span>
-          </Link>
+          </ScrollLink>
         </div>
 
         {/* Top Contact Info - Desktop */}
@@ -66,27 +67,27 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <ul className="hidden md:flex py-3 space-x-8 text-white text-sm font-semibold">
             <li className="flex items-center">
-              <Link href="/" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <ScrollLink href="/" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Home
-              </Link>
+              </ScrollLink>
             </li>
             
             <li className="flex items-center">
-              <Link href="/troubleshooting" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <ScrollLink href="/troubleshooting" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Troubleshooting
-              </Link>
+              </ScrollLink>
             </li>
             
             <li className="flex items-center">
-              <Link href="/maintenance" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <ScrollLink href="/maintenance" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Maintenance Guide
-              </Link>
+              </ScrollLink>
             </li>
 
             <li className="flex items-center">
-              <Link href="/blog" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <ScrollLink href="/blog" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Blog
-              </Link>
+              </ScrollLink>
             </li>
             
             {/* Services Dropdown */}
@@ -103,7 +104,7 @@ const Header = () => {
                   <div className="p-2">
                     {/* Show all services with proper URLs */}
                     {services.map((service) => (
-                      <Link 
+                      <ScrollLink 
                         key={service.id}
                         href={`/services/${service.id}`}
                         className="flex items-center p-3 text-gray-700 hover:bg-gray-100 hover:text-[#0056b3] rounded-md"
@@ -111,7 +112,7 @@ const Header = () => {
                       >
                         <i className={`fas ${service.icon} text-[#ff6b00] mr-3`}></i>
                         <span>{service.title}</span>
-                      </Link>
+                      </ScrollLink>
                     ))}
                     <Link 
                       href={isHomePage ? "#services" : "/#services"}
@@ -132,14 +133,14 @@ const Header = () => {
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href={isHomePage ? "#testimonials" : "/testimonials"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <ScrollLink href="/testimonials" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Testimonials
-              </Link>
+              </ScrollLink>
             </li>
             <li className="flex items-center">
-              <Link href={isHomePage ? "#service-areas" : "/service-areas"} className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
+              <ScrollLink href="/service-areas" className="hover:text-[#ff6b00] transition py-2 border-b-2 border-[#0056b3] hover:border-[#ff6b00]">
                 Service Areas
-              </Link>
+              </ScrollLink>
             </li>
 
           </ul>
@@ -150,21 +151,21 @@ const Header = () => {
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-white border-t border-gray-200`}>
         <ul className="container mx-auto px-4 py-3">
           <li className="py-2">
-            <Link href="/" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <ScrollLink href="/" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Home
-            </Link>
+            </ScrollLink>
           </li>
           
           <li className="py-2">
-            <Link href="/troubleshooting" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <ScrollLink href="/troubleshooting" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Troubleshooting
-            </Link>
+            </ScrollLink>
           </li>
           
           <li className="py-2">
-            <Link href="/maintenance" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <ScrollLink href="/maintenance" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Maintenance Guide
-            </Link>
+            </ScrollLink>
           </li>
           
           {/* Mobile Services Dropdown */}
@@ -173,14 +174,14 @@ const Header = () => {
             <ul className="pl-4 space-y-2">
               {services.map((service) => (
                 <li key={service.id}>
-                  <Link 
+                  <ScrollLink 
                     href={`/services/${service.id}`} 
                     onClick={toggleMobileMenu} 
                     className="flex items-center text-sm text-gray-700 hover:text-[#ff6b00]"
                   >
                     <i className={`fas ${service.icon} text-[#ff6b00] mr-2`}></i>
                     <span>{service.title}</span>
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
               <li>
@@ -202,14 +203,14 @@ const Header = () => {
             </Link>
           </li>
           <li className="py-2">
-            <Link href={isHomePage ? "#testimonials" : "/testimonials"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <ScrollLink href="/testimonials" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Testimonials
-            </Link>
+            </ScrollLink>
           </li>
           <li className="py-2">
-            <Link href={isHomePage ? "#service-areas" : "/service-areas"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
+            <ScrollLink href="/service-areas" onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">
               Service Areas
-            </Link>
+            </ScrollLink>
           </li>
           <li className="py-2">
             <Link href={isHomePage ? "#contact" : "/#contact"} onClick={toggleMobileMenu} className="block font-medium hover:text-[#ff6b00] transition">

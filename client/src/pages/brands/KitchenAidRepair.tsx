@@ -6,7 +6,7 @@ import { siteMetadata } from '@/lib/seo';
 import { Wrench, Phone, CheckCircle, Star, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 const kitchenaidAppliances = [
   { name: 'KitchenAid Refrigerators', models: 'French Door, Side-by-Side, Bottom Freezer, Counter-Depth', issues: 'Ice maker problems, temperature control, water filtration' },

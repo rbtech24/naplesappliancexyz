@@ -6,7 +6,7 @@ import { siteMetadata, structuredData } from '@/lib/seo';
 import { Wrench, CheckCircle, Clock, Shield, Star, Phone } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 const applianceTypes = [
   { name: 'Refrigerators', icon: '❄️', description: 'All makes and models, ice makers, water dispensers', link: '/services/refrigerator-repair' },

@@ -6,7 +6,7 @@ import { siteMetadata } from '@/lib/seo';
 import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Link } from 'wouter';
+import { ScrollLink } from '@/utils/scrollToTop';
 
 interface BlogPost {
   id: string;
@@ -325,10 +325,10 @@ export default function Blog() {
                       <span>{post.author}</span>
                     </div>
                     <Button variant="outline" size="sm" asChild>
-                      <Link href={`/blog/${post.id}`}>
+                      <ScrollLink href={`/blog/${post.id}`}>
                         Read More
                         <ArrowRight className="h-4 w-4 ml-1" />
-                      </Link>
+                      </ScrollLink>
                     </Button>
                   </div>
                 </CardContent>

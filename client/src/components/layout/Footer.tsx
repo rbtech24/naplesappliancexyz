@@ -1,4 +1,5 @@
 import { Link, useLocation } from "wouter";
+import { ScrollLink } from "@/utils/scrollToTop";
 import { siteMetadata } from "@/lib/seo";
 import { services, serviceAreas } from "@/lib/serviceData";
 
@@ -12,13 +13,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <Link href="/">
+            <ScrollLink href="/">
               <div className="flex items-center mb-6 cursor-pointer">
                 <span className="text-white text-2xl font-heading font-bold">Naples</span>
                 <span className="text-[#00a0e9] text-2xl font-heading font-bold">Appliance</span>
                 <span className="text-[#ff6b00] ml-1 text-2xl font-heading font-bold">Repair</span>
               </div>
-            </Link>
+            </ScrollLink>
             <p className="text-gray-400 mb-6">
               Professional appliance repair services in Naples, Florida. Fast, reliable service for all major brands and models.
             </p>
@@ -43,13 +44,13 @@ const Footer = () => {
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.id}>
-                  <Link 
+                  <ScrollLink 
                     href={`/services/${service.id}`} 
                     className="text-gray-400 hover:text-white transition flex items-center"
                   >
                     <i className={`fas ${service.icon} text-[#ff6b00] text-xs mr-2`}></i>
                     <span>{service.title}</span>
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
               <li>
@@ -69,21 +70,21 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceAreas.slice(0, 6).map((area, index) => (
                 <li key={index}>
-                  <Link 
+                  <ScrollLink 
                     href="/service-areas" 
                     className="text-gray-400 hover:text-white transition"
                   >
                     {area.name}
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
               <li>
-                <Link 
+                <ScrollLink 
                   href="/service-areas" 
                   className="text-gray-400 hover:text-white transition font-medium"
                 >
                   See All Locations
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
           </div>
