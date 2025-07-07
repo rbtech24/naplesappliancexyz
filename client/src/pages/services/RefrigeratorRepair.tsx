@@ -1,5 +1,6 @@
 import ServiceTemplate from "@/components/service/ServiceTemplate";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
 
 const refrigeratorService = services.find(service => service.id === "refrigerator-repair");
 
@@ -21,7 +22,7 @@ const RefrigeratorRepair = () => {
             <p>
               Our factory-trained technicians have extensive experience with all refrigerator types including 
               French door, side-by-side, bottom freezer, top freezer, built-in, and counter-depth models. 
-              We service all major brands including Samsung, LG, Whirlpool, GE, Maytag, KitchenAid, Sub-Zero, 
+              We service all major brands including {linkifyBrands("Samsung, LG, Whirlpool, GE, Maytag, KitchenAid, Sub-Zero,")}{" "}
               and many more.
             </p>
             <p>

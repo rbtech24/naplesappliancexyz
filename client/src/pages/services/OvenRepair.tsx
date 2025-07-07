@@ -1,5 +1,6 @@
 import ServiceTemplate from "@/components/service/ServiceTemplate";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
 
 const ovenService = services.find(service => service.id === "oven-repair");
 
@@ -22,7 +23,7 @@ const OvenRepair = () => {
             <p>
               Our experienced technicians are skilled in repairing all types of ovens, including electric ovens, 
               gas ovens, wall ovens, range ovens, convection ovens, steam ovens, and dual-fuel ranges. We service 
-              all major brands including GE, Whirlpool, Samsung, LG, KitchenAid, Thermador, Viking, Wolf, Bosch, 
+              all major brands including {linkifyBrands("GE, Whirlpool, Samsung, LG, KitchenAid, Thermador, Viking, Wolf, Bosch,")}{" "}
               and many others.
             </p>
             <p>

@@ -1,5 +1,6 @@
 import ServiceTemplate from "@/components/service/ServiceTemplate";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
 
 const dishwasherService = services.find(service => service.id === "dishwasher-repair");
 
@@ -20,8 +21,8 @@ const DishwasherRepair = () => {
             </p>
             <p>
               Our skilled technicians have extensive experience with all types of dishwashers, including built-in, 
-              portable, drawer, and countertop models. We service all major brands including Bosch, KitchenAid, 
-              Whirlpool, GE, Maytag, Samsung, LG, Miele, Frigidaire, and many others.
+              portable, drawer, and countertop models. We service all major brands including {linkifyBrands("Bosch, KitchenAid, Whirlpool, GE, Maytag, Samsung, LG, Miele, Frigidaire,")}{" "}
+              and many others.
             </p>
             <p>
               Whether your dishwasher isn't cleaning properly, is leaking, won't drain, or has stopped working 

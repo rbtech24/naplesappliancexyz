@@ -1,5 +1,6 @@
 import ServiceTemplate from "@/components/service/ServiceTemplate";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
 
 const dryerService = services.find(service => service.id === "dryer-repair");
 

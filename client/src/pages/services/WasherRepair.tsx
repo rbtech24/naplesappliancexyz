@@ -1,5 +1,6 @@
 import ServiceTemplate from "@/components/service/ServiceTemplate";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
 
 const washerService = services.find(service => service.id === "washing-machine-repair");
 
@@ -22,7 +23,8 @@ const WasherRepair = () => {
             <p>
               Our technicians are highly trained and experienced in repairing all types of washing machines, 
               including front-loading, top-loading, high-efficiency (HE), compact, and smart washers. We service 
-              all major brands including Samsung, LG, Whirlpool, GE, Maytag, Bosch, Speed Queen, and many others.
+              all major brands including {linkifyBrands("Samsung, LG, Whirlpool, GE, Maytag, Bosch, Speed Queen,")}{" "}
+              and many others.
             </p>
             <p>
               Whether your washer is leaking, making unusual noises, not spinning properly, or has stopped 

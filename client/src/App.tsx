@@ -90,6 +90,22 @@ import SpeedQueenRepair from "@/pages/brands/SpeedQueenRepair";
 import AmanaRepair from "@/pages/brands/AmanaRepair";
 import HaierRepair from "@/pages/brands/HaierRepair";
 
+// Location Pages
+import BonitaSpringsApplianceRepair from "@/pages/locations/BonitaSpringsApplianceRepair";
+import EsteroApplianceRepair from "@/pages/locations/EsteroApplianceRepair";
+import NaplesParkApplianceRepair from "@/pages/locations/NaplesParkApplianceRepair";
+import NorthNaplesApplianceRepair from "@/pages/locations/NorthNaplesApplianceRepair";
+import NaplesApplianceRepair from "@/pages/locations/NaplesApplianceRepair";
+import GoldenGateApplianceRepair from "@/pages/locations/GoldenGateApplianceRepair";
+import MarcoIslandApplianceRepair from "@/pages/locations/MarcoIslandApplianceRepair";
+import PelicanBayApplianceRepair from "@/pages/locations/PelicanBayApplianceRepair";
+import PineRidgeApplianceRepair from "@/pages/locations/PineRidgeApplianceRepair";
+import EastNaplesApplianceRepair from "@/pages/locations/EastNaplesApplianceRepair";
+import LelyApplianceRepair from "@/pages/locations/LelyApplianceRepair";
+import ImmokaleesApplianceRepair from "@/pages/locations/ImmokaleesApplianceRepair";
+import EvergladeCityApplianceRepair from "@/pages/locations/EvergladeCityApplianceRepair";
+import FortMyersApplianceRepair from "@/pages/locations/FortMyersApplianceRepair";
+
 /**
  * Main application component with client-side routing
  * Includes RouteHandler for better navigation in Netlify
@@ -196,6 +212,23 @@ function App() {
         <Route path="/brands/speed-queen" component={SpeedQueenRepair} />
         <Route path="/brands/amana" component={AmanaRepair} />
         <Route path="/brands/haier" component={HaierRepair} />
+        
+        {/* Location Pages */}
+        <Route path="/bonita-springs-appliance-repair" component={BonitaSpringsApplianceRepair} />
+        <Route path="/estero-appliance-repair" component={EsteroApplianceRepair} />
+        <Route path="/naples-park-appliance-repair" component={NaplesParkApplianceRepair} />
+        <Route path="/north-naples-appliance-repair" component={NorthNaplesApplianceRepair} />
+        <Route path="/naples-appliance-repair" component={NaplesApplianceRepair} />
+        <Route path="/golden-gate-appliance-repair" component={GoldenGateApplianceRepair} />
+        <Route path="/marco-island-appliance-repair" component={MarcoIslandApplianceRepair} />
+        <Route path="/pelican-bay-appliance-repair" component={PelicanBayApplianceRepair} />
+        <Route path="/pine-ridge-appliance-repair" component={PineRidgeApplianceRepair} />
+        <Route path="/east-naples-appliance-repair" component={EastNaplesApplianceRepair} />
+        <Route path="/lely-appliance-repair" component={LelyApplianceRepair} />
+        <Route path="/immokalee-appliance-repair" component={ImmokaleesApplianceRepair} />
+        <Route path="/everglades-city-appliance-repair" component={EvergladeCityApplianceRepair} />
+        <Route path="/fort-myers-appliance-repair" component={FortMyersApplianceRepair} />
+        
         <Route component={NotFound} />
       </Switch>
       
