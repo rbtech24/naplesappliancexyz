@@ -4,10 +4,11 @@ import { serviceAreas } from "@/lib/serviceData";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
+import collierCountyMapImage from "@assets/collier county_1751931295728.png";
 
 const ServiceAreasPage = () => {
-  // Map of Collier County
-  const collierCountyMapUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Map_of_Florida_highlighting_Collier_County.svg/1200px-Map_of_Florida_highlighting_Collier_County.svg.png";
+  // Map of Collier County - using local high-quality image
+  const collierCountyMapUrl = collierCountyMapImage;
 
   // Additional content about service areas
   const areaDescriptions = {
@@ -214,8 +215,8 @@ const ServiceAreasPage = () => {
                 <div className="flex justify-center items-center h-full">
                   <img 
                     src={collierCountyMapUrl} 
-                    alt="Map of Collier County, Florida" 
-                    className="rounded-lg shadow-md w-full h-auto"
+                    alt="Map of Collier County, Florida showing Naples, Marco Island, Everglades City, and Immokalee service areas" 
+                    className="rounded-lg shadow-lg w-full h-auto border border-gray-200"
                   />
                 </div>
               </div>

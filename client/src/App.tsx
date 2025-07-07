@@ -4,13 +4,6 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 import SEO from "./components/SEO";
 import MobileCallBar from "./components/layout/MobileCallBar";
-import RefrigeratorRepair from "@/pages/services/RefrigeratorRepair";
-import WasherRepair from "@/pages/services/WasherRepair";
-import OvenRepair from "@/pages/services/OvenRepair";
-import DishwasherRepair from "@/pages/services/DishwasherRepair";
-import DryerRepair from "@/pages/services/DryerRepair";
-import MicrowaveRepair from "@/pages/services/MicrowaveRepair";
-import ApplianceRepair from "@/pages/services/ApplianceRepair";
 import RouteHandler from "@/components/RouteHandler";
 import { ChatbotButton } from "@/components/home/ChatbotButton";
 
@@ -20,6 +13,15 @@ import TestimonialsPage from "@/pages/Testimonials";
 import ServiceAreasPage from "@/pages/ServiceAreas";
 import TroubleshootingGuide from "@/pages/TroubleshootingGuide";
 import MaintenanceGuide from "@/pages/MaintenanceGuide";
+
+// Service Pages
+import ApplianceRepair from "@/pages/services/ApplianceRepair";
+import RefrigeratorRepair from "@/pages/services/RefrigeratorRepair";
+import WasherRepair from "@/pages/services/WasherRepair";
+import DryerRepair from "@/pages/services/DryerRepair";
+import OvenRepair from "@/pages/services/OvenRepair";
+import DishwasherRepair from "@/pages/services/DishwasherRepair";
+import MicrowaveRepair from "@/pages/services/MicrowaveRepair";
 
 // Blog Pages
 import Blog from "@/pages/blog/Blog";

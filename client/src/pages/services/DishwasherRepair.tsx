@@ -1,7 +1,7 @@
 import ServiceTemplate from "@/components/service/ServiceTemplate";
 import { services } from "@/lib/serviceData";
 
-const dishwasherService = services.find(service => service.id === "dishwasher");
+const dishwasherService = services.find(service => service.id === "dishwasher-repair");
 
 const DishwasherRepair = () => {
   if (!dishwasherService) return null;
