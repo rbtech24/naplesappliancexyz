@@ -7,6 +7,7 @@ import { Wrench, Phone, CheckCircle, Star, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ScrollLink } from '@/utils/scrollToTop';
+import { Link } from 'wouter';
 
 const geAppliances = [
   { name: 'GE Refrigerators', models: 'Profile, Cafe, Monogram, French Door, Side-by-Side', issues: 'Ice maker problems, temperature control, water filter issues' },

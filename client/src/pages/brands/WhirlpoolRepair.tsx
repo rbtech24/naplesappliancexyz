@@ -7,6 +7,7 @@ import { Wrench, Phone, CheckCircle, Star, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ScrollLink } from '@/utils/scrollToTop';
+import { Link } from 'wouter';
 
 const whirlpoolAppliances = [
   { name: 'Whirlpool Refrigerators', models: 'French Door, Side-by-Side, Top Freezer, Counter-Depth', issues: 'Ice maker problems, temperature control, adaptive defrost issues' },
