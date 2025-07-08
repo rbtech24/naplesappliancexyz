@@ -51,7 +51,7 @@ interface BrandLinkProps {
 export const BrandLink: React.FC<BrandLinkProps> = ({ brandName, className = "", children }) => {
   const brandUrl = brandUrls[brandName];
   
-  if (brandUrl && brandUrl !== '/brands') {
+  if (brandUrl) {
     return (
       <Link href={brandUrl}>
         <span className={`hover:text-[#0056b3] hover:underline cursor-pointer transition-colors duration-200 ${className}`}>
