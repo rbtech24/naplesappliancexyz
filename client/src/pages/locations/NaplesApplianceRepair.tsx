@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
+import { linkifyServices } from "@/utils/serviceLinks";
 
 const NaplesApplianceRepair = () => {
   const pageTitle = "Appliance Repair Naples FL | #1 Rated Service in Naples";
@@ -137,8 +139,8 @@ const NaplesApplianceRepair = () => {
                 Complete Naples Appliance Repair Services
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                From downtown Naples to the beaches, we provide comprehensive appliance repair services 
-                for all major brands and models throughout the greater Naples area.
+                From downtown Naples to the beaches, we provide comprehensive {linkifyServices("appliance repair", "text-gray-600 hover:text-[#0056b3]")} services 
+                for all major {linkifyBrands("brands", "text-gray-600 hover:text-[#0056b3]")} and models throughout the greater Naples area.
               </p>
             </div>
             
@@ -148,11 +150,15 @@ const NaplesApplianceRepair = () => {
                   <div className="text-[#ff6b00] text-3xl mb-4">
                     <i className={`fas ${service.icon}`}></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-[#0056b3]">{service.title} in Naples</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-[#0056b3]">
+                    {linkifyServices(service.title, "text-[#0056b3] hover:text-[#ff6b00]")} in Naples
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {linkifyServices(service.description, "text-gray-600 hover:text-[#0056b3]")}
+                  </p>
                   <ul className="text-sm text-gray-500 space-y-1">
                     {service.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
+                      <li key={idx}>• {linkifyServices(feature, "text-gray-500 hover:text-[#0056b3]")}</li>
                     ))}
                   </ul>
                 </div>
@@ -220,6 +226,8 @@ const NaplesApplianceRepair = () => {
                     <li>• Salt air corrosion prevention for coastal areas</li>
                     <li>• Hurricane preparedness and post-storm repairs</li>
                     <li>• Energy efficiency optimization for year-round AC use</li>
+                    <li>• Expert service for all major brands: {linkifyBrands("Samsung, LG, Whirlpool, GE, Maytag, Bosch, KitchenAid", "text-gray-600 hover:text-[#0056b3]")}</li>
+                    <li>• Specialized {linkifyServices("refrigerator repair", "text-gray-600 hover:text-[#0056b3]")}, {linkifyServices("washer repair", "text-gray-600 hover:text-[#0056b3]")}, and {linkifyServices("dryer repair", "text-gray-600 hover:text-[#0056b3]")} services</li>
                   </ul>
                 </div>
               </div>

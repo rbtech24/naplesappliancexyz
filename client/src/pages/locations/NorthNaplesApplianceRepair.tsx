@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
+import { linkifyServices } from "@/utils/serviceLinks";
 
 const NorthNaplesApplianceRepair = () => {
   const pageTitle = "Appliance Repair North Naples FL | Expert Service Available Today";

@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
+import { linkifyServices } from "@/utils/serviceLinks";
 
 const BonitaSpringsApplianceRepair = () => {
   const pageTitle = "Appliance Repair Bonita Springs FL | Same-Day Service";
@@ -134,8 +136,8 @@ const BonitaSpringsApplianceRepair = () => {
                 Bonita Springs Appliance Repair Services
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our certified technicians provide comprehensive appliance repair services throughout 
-                Bonita Springs and surrounding areas in Southwest Florida.
+                Our certified technicians provide comprehensive {linkifyServices("appliance repair", "text-gray-600 hover:text-[#0056b3]")} services throughout 
+                Bonita Springs and surrounding areas in Southwest Florida. We service all major {linkifyBrands("brands", "text-gray-600 hover:text-[#0056b3]")} including {linkifyBrands("Samsung, LG, Whirlpool, GE, Maytag, Bosch", "text-gray-600 hover:text-[#0056b3]")}.
               </p>
             </div>
             
@@ -145,11 +147,15 @@ const BonitaSpringsApplianceRepair = () => {
                   <div className="text-[#ff6b00] text-3xl mb-4">
                     <i className={`fas ${service.icon}`}></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-[#0056b3]">{service.title} in Bonita Springs</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-[#0056b3]">
+                    {linkifyServices(service.title, "text-[#0056b3] hover:text-[#ff6b00]")} in Bonita Springs
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {linkifyServices(service.description, "text-gray-600 hover:text-[#0056b3]")}
+                  </p>
                   <ul className="text-sm text-gray-500 space-y-1">
                     {service.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
+                      <li key={idx}>• {linkifyServices(feature, "text-gray-500 hover:text-[#0056b3]")}</li>
                     ))}
                   </ul>
                 </div>

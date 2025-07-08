@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
+import { linkifyServices } from "@/utils/serviceLinks";
 
 const NaplesParkApplianceRepair = () => {
   const pageTitle = "Appliance Repair Naples Park FL | Local Expert Technicians";

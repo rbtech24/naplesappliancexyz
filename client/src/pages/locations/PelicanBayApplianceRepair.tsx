@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
 import { linkifyBrands } from "@/utils/brandLinks";
+import { linkifyServices } from "@/utils/serviceLinks";
 
 const PelicanBayApplianceRepair = () => {
   const pageTitle = "Appliance Repair Pelican Bay FL | Luxury Service Specialists";
