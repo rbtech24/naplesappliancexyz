@@ -125,7 +125,7 @@ const NaplesApplianceRepair = () => {
                 </a>
               </Button>
               <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#0056b3] font-bold py-4 px-8 rounded-full text-lg">
-                <a href="/#contact">Get Free Estimate</a>
+                <a href="/#contact">Schedule Service</a>
               </Button>
             </div>
           </div>
