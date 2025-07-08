@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import React from "react";
+import { scrollToTop } from "./scrollToTop";
 
 // Brand name to URL mapping
 export const brandUrls: { [key: string]: string } = {
@@ -53,10 +54,12 @@ export const BrandLink: React.FC<BrandLinkProps> = ({ brandName, className = "",
   
   if (brandUrl) {
     return (
-      <Link href={brandUrl}>
-        <span className={`hover:text-[#0056b3] hover:underline cursor-pointer transition-colors duration-200 ${className}`}>
-          {children || brandName}
-        </span>
+      <Link 
+        href={brandUrl} 
+        className={`hover:text-[#0056b3] hover:underline cursor-pointer transition-colors duration-200 ${className}`}
+        onClick={() => scrollToTop('smooth')}
+      >
+        {children || brandName}
       </Link>
     );
   }
@@ -82,7 +85,11 @@ export const linkifyBrands = (text: string, className: string = ""): React.React
       matches.forEach((match, i) => {
         if (i > 0) {
           newParts.push(
-            <BrandLink key={`${brandName}-${index}-${i}`} brandName={brandName} className={className} />
+            <BrandLink 
+              key={`${brandName}-${index}-${i}`} 
+              brandName={brandName} 
+              className={className} 
+            />
           );
         }
         if (match) {

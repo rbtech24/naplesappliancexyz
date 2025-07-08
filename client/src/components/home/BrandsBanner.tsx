@@ -11,7 +11,7 @@ const BrandsBanner = () => {
             <BrandLink 
               key={index} 
               brandName={brand} 
-              className="text-gray-500 text-lg font-semibold"
+              className="text-gray-500 text-lg font-semibold block"
             />
           ))}
         </div>
