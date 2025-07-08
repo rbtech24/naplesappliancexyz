@@ -167,19 +167,27 @@ const PelicanBayApplianceRepair = () => {
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <h4 className="font-bold text-[#ff6b00]">Refrigeration</h4>
-                        <p className="text-gray-600">Sub-Zero, Thermador, Viking</p>
+                        <p className="text-gray-600">
+                          {linkifyBrands("Sub-Zero, Thermador, Viking", "text-gray-600 hover:text-[#0056b3]")}
+                        </p>
                       </div>
                       <div>
                         <h4 className="font-bold text-[#ff6b00]">Cooking</h4>
-                        <p className="text-gray-600">Wolf, Miele, Dacor</p>
+                        <p className="text-gray-600">
+                          {linkifyBrands("Wolf, Miele, Dacor", "text-gray-600 hover:text-[#0056b3]")}
+                        </p>
                       </div>
                       <div>
                         <h4 className="font-bold text-[#ff6b00]">Laundry</h4>
-                        <p className="text-gray-600">Miele, Asko, Speed Queen</p>
+                        <p className="text-gray-600">
+                          {linkifyBrands("Miele, Asko, Speed Queen", "text-gray-600 hover:text-[#0056b3]")}
+                        </p>
                       </div>
                       <div>
                         <h4 className="font-bold text-[#ff6b00]">Dishwashers</h4>
-                        <p className="text-gray-600">Miele, Fisher & Paykel</p>
+                        <p className="text-gray-600">
+                          {linkifyBrands("Miele, Fisher & Paykel", "text-gray-600 hover:text-[#0056b3]")}
+                        </p>
                       </div>
                     </div>
                   </div>
