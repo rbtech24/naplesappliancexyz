@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { ScrollLink } from '@/utils/scrollToTop';
+import { BreadcrumbNav } from '@/components/BreadcrumbNav';
 
 // Blog post data - matches the data from Blog.tsx
 const blogPostsData = [
@@ -135,6 +136,15 @@ export default function DynamicBlogPost() {
 
       <main>
         <div className="container px-4 py-12 max-w-4xl mx-auto">
+          {/* Breadcrumb Navigation */}
+          <BreadcrumbNav 
+            items={[
+              { label: 'Blog', href: '/blog' },
+              { label: post.title }
+            ]} 
+            className="mb-8"
+          />
+
           {/* Back to Blog Button */}
           <div className="mb-8">
             <Button variant="outline" asChild>

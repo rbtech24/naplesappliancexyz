@@ -8,6 +8,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ScrollLink } from '@/utils/scrollToTop';
 import { Link } from 'wouter';
+import { BreadcrumbNav } from '@/components/BreadcrumbNav';
 
 interface BlogPost {
   id: string;
@@ -767,6 +768,14 @@ export default function Blog() {
 
       <main>
         <div className="container px-4 py-12 max-w-6xl mx-auto">
+          {/* Breadcrumb Navigation */}
+          <BreadcrumbNav 
+            items={[
+              { label: 'Blog' }
+            ]} 
+            className="mb-8"
+          />
+
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
               Appliance Repair Blog

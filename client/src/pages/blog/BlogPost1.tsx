@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import { Link } from 'wouter';
 import { linkifyCities } from '@/utils/cityLinks';
 import { linkifyBrands } from '@/utils/brandLinks';
+import { BreadcrumbNav } from '@/components/BreadcrumbNav';
 
 export default function BlogPost1() {
   return (
@@ -28,6 +29,15 @@ export default function BlogPost1() {
 
       <main>
         <div className="container px-4 py-12 max-w-4xl mx-auto">
+          {/* Breadcrumb Navigation */}
+          <BreadcrumbNav 
+            items={[
+              { label: 'Blog', href: '/blog' },
+              { label: 'The Ultimate Guide to Extending Your Appliance Lifespan in Southwest Florida' }
+            ]} 
+            className="mb-8"
+          />
+
           <div className="mb-8">
             <Button variant="outline" size="sm" asChild className="mb-6">
               <Link href="/blog">

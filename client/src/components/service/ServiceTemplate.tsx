@@ -8,6 +8,7 @@ import { siteMetadata } from "@/lib/seo";
 import CTASection from "@/components/home/CTASection";
 import FAQ from "@/components/home/FAQ";
 import BrandsBanner from "@/components/home/BrandsBanner";
+import { BreadcrumbNav } from "@/components/BreadcrumbNav";
 
 interface ServiceTemplateProps {
   service: Service;
@@ -119,6 +120,15 @@ const ServiceTemplate = ({
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[#0056b3] to-[#0072e5] text-white py-16">
           <div className="container mx-auto px-4">
+            {/* Breadcrumb Navigation */}
+            <BreadcrumbNav 
+              items={[
+                { label: 'Services', href: '/services/appliance-repair' },
+                { label: service.title }
+              ]} 
+              className="mb-8 text-blue-100"
+            />
+
             <div className="flex flex-col lg:flex-row items-center">
               <div className="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
                 <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
