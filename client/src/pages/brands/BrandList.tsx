@@ -6,6 +6,7 @@ import { Wrench, Phone } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ScrollLink } from '@/utils/scrollToTop';
+import { Link } from 'wouter';
 
 const brands = [
   { name: 'Samsung', slug: 'samsung', description: 'Smart appliances with innovative technology' },
