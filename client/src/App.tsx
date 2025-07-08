@@ -31,6 +31,7 @@ import BlogPost3 from "@/pages/blog/BlogPost3";
 import BlogPost4 from "@/pages/blog/BlogPost4";
 import BlogPost5 from "@/pages/blog/BlogPost5";
 import BlogPost6 from "@/pages/blog/BlogPost6";
+import DynamicBlogPost from "@/pages/blog/DynamicBlogPost";
 
 // Additional Blog Posts
 import DishwasherNotDraining from "@/pages/blog/DishwasherNotDraining";
@@ -181,6 +182,9 @@ function App() {
         <Route path="/blog/snowbird-appliance-preparation-naples-second-homes" component={SnowbirdAppliancePreparation} />
         <Route path="/blog/vacation-rental-appliance-maintenance-naples" component={VacationRentalApplianceMaintenance} />
         <Route path="/blog/second-home-appliance-winterization-naples-snowbirds" component={SecondHomeApplianceWinterization} />
+        
+        {/* Catch-all route for all other blog posts */}
+        <Route path="/blog/:id" component={DynamicBlogPost} />
         
         {/* Legacy blog URL redirects */}
         <Route path="/blog/1" component={BlogPost1} />
