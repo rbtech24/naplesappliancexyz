@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { ScrollLink } from "@/utils/scrollToTop";
 import { siteMetadata } from "@/lib/seo";
 import { services, serviceAreas } from "@/lib/serviceData";
+import { CityLink } from "@/utils/cityLinks";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -70,12 +71,10 @@ const Footer = () => {
             <ul className="space-y-2">
               {serviceAreas.slice(0, 6).map((area, index) => (
                 <li key={index}>
-                  <ScrollLink 
-                    href="/service-areas" 
+                  <CityLink 
+                    cityName={area.name}
                     className="text-gray-400 hover:text-white transition"
-                  >
-                    {area.name}
-                  </ScrollLink>
+                  />
                 </li>
               ))}
               <li>

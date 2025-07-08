@@ -2,6 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import L from 'leaflet';
+import { linkifyCities } from "@/utils/cityLinks";
 
 // Fix for Leaflet default marker icon issue
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -79,9 +80,7 @@ const ServiceAreaMap = () => {
           </div>
           <div className="p-4 bg-gray-50">
             <p className="text-center text-gray-700">
-              We service Naples, Marco Island, Bonita Springs, Estero, Golden Gate, 
-              Pelican Bay, Naples Park, Pine Ridge, North Naples, East Naples, Lely, 
-              Fort Myers, Immokalee, and Everglades City.
+              {linkifyCities("We service Naples, Marco Island, Bonita Springs, Estero, Golden Gate, Pelican Bay, Naples Park, Pine Ridge, North Naples, East Naples, Lely, Fort Myers, Immokalee, and Everglades City.", "text-gray-700 hover:text-[#0056b3]")}
             </p>
           </div>
         </div>

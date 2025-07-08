@@ -6,6 +6,8 @@ import { Calendar, Clock, User, ArrowLeft, CheckCircle } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Link } from 'wouter';
+import { linkifyCities } from '@/utils/cityLinks';
+import { linkifyBrands } from '@/utils/brandLinks';
 
 export default function BlogPost1() {
   return (

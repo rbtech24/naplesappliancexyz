@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import L from 'leaflet';
+import { CityLink } from "@/utils/cityLinks";
 
 // Fix for Leaflet default marker icon issue
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -99,7 +100,10 @@ const ServiceAreas = () => {
                 {serviceAreas.map((area, index) => (
                   <div key={index} className="flex items-center">
                     <i className="fas fa-map-marker-alt text-[#ff6b00] mr-2"></i>
-                    <span>{area.name}</span>
+                    <CityLink 
+                      cityName={area.name}
+                      className="text-gray-700 hover:text-[#0056b3] transition-colors"
+                    />
                   </div>
                 ))}
               </div>
