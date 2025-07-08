@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import collierCountyMapImage from "@assets/collier county_1751931295728.png";
+import { CityLink, linkifyCities } from "@/utils/cityLinks";
 
 const ServiceAreasPage = () => {
   // Map of Collier County - using local high-quality image
@@ -250,35 +251,60 @@ const ServiceAreasPage = () => {
                     <td className="py-3 px-4 align-top">
                       <ul className="list-disc list-inside">
                         {groupedAreas.northernAreas.map((area, index) => (
-                          <li key={index} className="text-gray-700 py-1">{area.name}</li>
+                          <li key={index} className="text-gray-700 py-1">
+                            <CityLink 
+                              cityName={area.name}
+                              className="text-gray-700 hover:text-[#0056b3] transition-colors"
+                            />
+                          </li>
                         ))}
                       </ul>
                     </td>
                     <td className="py-3 px-4 align-top">
                       <ul className="list-disc list-inside">
                         {groupedAreas.centralAreas.map((area, index) => (
-                          <li key={index} className="text-gray-700 py-1">{area.name}</li>
+                          <li key={index} className="text-gray-700 py-1">
+                            <CityLink 
+                              cityName={area.name}
+                              className="text-gray-700 hover:text-[#0056b3] transition-colors"
+                            />
+                          </li>
                         ))}
                       </ul>
                     </td>
                     <td className="py-3 px-4 align-top">
                       <ul className="list-disc list-inside">
                         {groupedAreas.easternAreas.map((area, index) => (
-                          <li key={index} className="text-gray-700 py-1">{area.name}</li>
+                          <li key={index} className="text-gray-700 py-1">
+                            <CityLink 
+                              cityName={area.name}
+                              className="text-gray-700 hover:text-[#0056b3] transition-colors"
+                            />
+                          </li>
                         ))}
                       </ul>
                     </td>
                     <td className="py-3 px-4 align-top">
                       <ul className="list-disc list-inside">
                         {groupedAreas.southernAreas.map((area, index) => (
-                          <li key={index} className="text-gray-700 py-1">{area.name}</li>
+                          <li key={index} className="text-gray-700 py-1">
+                            <CityLink 
+                              cityName={area.name}
+                              className="text-gray-700 hover:text-[#0056b3] transition-colors"
+                            />
+                          </li>
                         ))}
                       </ul>
                     </td>
                     <td className="py-3 px-4 align-top">
                       <ul className="list-disc list-inside">
                         {groupedAreas.westernAreas.map((area, index) => (
-                          <li key={index} className="text-gray-700 py-1">{area.name}</li>
+                          <li key={index} className="text-gray-700 py-1">
+                            <CityLink 
+                              cityName={area.name}
+                              className="text-gray-700 hover:text-[#0056b3] transition-colors"
+                            />
+                          </li>
                         ))}
                       </ul>
                     </td>
@@ -289,29 +315,59 @@ const ServiceAreasPage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0056b3] mb-4">Naples</h3>
-                <p className="text-gray-700">{areaDescriptions.naples}</p>
+                <h3 className="text-xl font-bold text-[#0056b3] mb-4">
+                  <CityLink 
+                    cityName="Naples"
+                    className="text-[#0056b3] hover:text-[#ff6b00] transition-colors"
+                  />
+                </h3>
+                <p className="text-gray-700">
+                  {linkifyCities(areaDescriptions.naples, "text-gray-700 hover:text-[#0056b3]")}
+                </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0056b3] mb-4">Marco Island</h3>
-                <p className="text-gray-700">{areaDescriptions.marcoIsland}</p>
+                <h3 className="text-xl font-bold text-[#0056b3] mb-4">
+                  <CityLink 
+                    cityName="Marco Island"
+                    className="text-[#0056b3] hover:text-[#ff6b00] transition-colors"
+                  />
+                </h3>
+                <p className="text-gray-700">
+                  {linkifyCities(areaDescriptions.marcoIsland, "text-gray-700 hover:text-[#0056b3]")}
+                </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0056b3] mb-4">Bonita Springs</h3>
-                <p className="text-gray-700">{areaDescriptions.bonitaSprings}</p>
+                <h3 className="text-xl font-bold text-[#0056b3] mb-4">
+                  <CityLink 
+                    cityName="Bonita Springs"
+                    className="text-[#0056b3] hover:text-[#ff6b00] transition-colors"
+                  />
+                </h3>
+                <p className="text-gray-700">
+                  {linkifyCities(areaDescriptions.bonitaSprings, "text-gray-700 hover:text-[#0056b3]")}
+                </p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-[#0056b3] mb-4">Estero</h3>
-                <p className="text-gray-700">{areaDescriptions.estero}</p>
+                <h3 className="text-xl font-bold text-[#0056b3] mb-4">
+                  <CityLink 
+                    cityName="Estero"
+                    className="text-[#0056b3] hover:text-[#ff6b00] transition-colors"
+                  />
+                </h3>
+                <p className="text-gray-700">
+                  {linkifyCities(areaDescriptions.estero, "text-gray-700 hover:text-[#0056b3]")}
+                </p>
               </div>
             </div>
             
             <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold text-[#0056b3] mb-4">Additional Service Areas</h3>
-              <p className="text-gray-700">{areaDescriptions.surrounding}</p>
+              <p className="text-gray-700">
+                {linkifyCities(areaDescriptions.surrounding, "text-gray-700 hover:text-[#0056b3]")}
+              </p>
             </div>
           </div>
         </section>
@@ -327,7 +383,7 @@ const ServiceAreasPage = () => {
               <div className="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
                 <h3 className="text-2xl font-bold text-[#0056b3] mb-4">Primary Service Area</h3>
                 <p className="text-lg text-gray-700 mb-4">
-                  Our primary service area includes Naples, Marco Island, and immediate surrounding communities. Within this area, we offer:
+                  {linkifyCities("Our primary service area includes Naples, Marco Island, and immediate surrounding communities. Within this area, we offer:", "text-gray-700 hover:text-[#0056b3]")}
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
                   <li>Same-day service in many cases</li>
@@ -343,7 +399,7 @@ const ServiceAreasPage = () => {
               <div className="bg-gray-50 p-8 rounded-lg shadow-md">
                 <h3 className="text-2xl font-bold text-[#0056b3] mb-4">Extended Service Areas</h3>
                 <p className="text-lg text-gray-700 mb-4">
-                  For communities in our extended service area, such as Fort Myers and Immokalee:
+                  {linkifyCities("For communities in our extended service area, such as Fort Myers and Immokalee:", "text-gray-700 hover:text-[#0056b3]")}
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
                   <li>Service typically available within 1-2 business days</li>
