@@ -140,7 +140,7 @@ const MarcoIslandApplianceRepair = () => {
                 <p className="text-lg text-gray-700 mb-6">
                   Marco Island's unique coastal environment presents special challenges for appliances. 
                   Salt air, high humidity, and frequent storms require specialized knowledge and preventive care 
-                  that our technicians are uniquely qualified to provide.
+                  that our technicians are uniquely qualified to provide. We service all premium {linkifyBrands("brands", "text-gray-700 hover:text-[#0056b3]")} including {linkifyBrands("Sub-Zero, Wolf, Viking, Thermador, Samsung, LG", "text-gray-700 hover:text-[#0056b3]")}.
                 </p>
                 <p className="text-lg text-gray-700 mb-6">
                   We understand the luxury appliances commonly found in Marco Island homes and vacation rentals. 

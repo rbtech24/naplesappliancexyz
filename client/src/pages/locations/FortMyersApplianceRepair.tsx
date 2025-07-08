@@ -139,9 +139,9 @@ const FortMyersApplianceRepair = () => {
                 </h2>
                 <p className="text-lg text-gray-700 mb-6">
                   Fort Myers is the heart of Lee County, a vibrant city with diverse neighborhoods 
-                  from historic downtown to modern developments. Our appliance repair technicians 
+                  from historic downtown to modern developments. Our {linkifyServices("appliance repair", "text-gray-700 hover:text-[#0056b3]")} technicians 
                   serve the entire Fort Myers area with the expertise and professionalism that 
-                  residents and businesses have trusted for over 15 years.
+                  residents and businesses have trusted for over 15 years. We service all major {linkifyBrands("brands", "text-gray-700 hover:text-[#0056b3]")} including {linkifyBrands("Samsung, LG, Whirlpool, GE, Maytag, Bosch", "text-gray-700 hover:text-[#0056b3]")}.
                 </p>
                 <p className="text-lg text-gray-700 mb-6">
                   Whether you're in a downtown high-rise, a McGregor waterfront home, or a family 

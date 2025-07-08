@@ -137,8 +137,8 @@ const EsteroApplianceRepair = () => {
                 Estero Appliance Repair Services
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                From Coconut Point to The Brooks, our certified technicians provide expert appliance 
-                repair services throughout Estero and surrounding Lee County areas.
+                From Coconut Point to The Brooks, our certified technicians provide expert {linkifyServices("appliance repair", "text-gray-600 hover:text-[#0056b3]")} 
+                services throughout Estero and surrounding Lee County areas. We service all major {linkifyBrands("brands", "text-gray-600 hover:text-[#0056b3]")} including {linkifyBrands("Samsung, LG, Whirlpool, GE, Maytag, Bosch", "text-gray-600 hover:text-[#0056b3]")}.
               </p>
             </div>
             
@@ -148,11 +148,15 @@ const EsteroApplianceRepair = () => {
                   <div className="text-[#ff6b00] text-3xl mb-4">
                     <i className={`fas ${service.icon}`}></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-[#0056b3]">{service.title} in Estero</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-[#0056b3]">
+                    {linkifyServices(service.title, "text-[#0056b3] hover:text-[#ff6b00]")} in Estero
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {linkifyServices(service.description, "text-gray-600 hover:text-[#0056b3]")}
+                  </p>
                   <ul className="text-sm text-gray-500 space-y-1">
                     {service.features.map((feature, idx) => (
-                      <li key={idx}>• {feature}</li>
+                      <li key={idx}>• {linkifyServices(feature, "text-gray-500 hover:text-[#0056b3]")}</li>
                     ))}
                   </ul>
                 </div>
