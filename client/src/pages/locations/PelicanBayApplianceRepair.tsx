@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/serviceData";
+import { linkifyBrands } from "@/utils/brandLinks";
 
 const PelicanBayApplianceRepair = () => {
   const pageTitle = "Appliance Repair Pelican Bay FL | Luxury Service Specialists";
@@ -126,9 +127,7 @@ const PelicanBayApplianceRepair = () => {
                   📞 Call {siteMetadata.phoneNumber}
                 </a>
               </Button>
-              <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#0056b3] font-bold py-4 px-8 rounded-full text-lg">
-                <a href="/#contact">Schedule Service</a>
-              </Button>
+
             </div>
           </div>
         </section>

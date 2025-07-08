@@ -136,9 +136,7 @@ const ServiceTemplate = ({
                   ))}
                 </div>
                 <div className="flex space-x-4">
-                  <Button asChild className="bg-[#ff6b00] hover:bg-white hover:text-[#ff6b00] text-white text-lg font-bold py-3 px-8 rounded-full shadow-lg">
-                    <a href="#contact">Schedule Service</a>
-                  </Button>
+                  
                   <Button asChild variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-[#0056b3] text-lg font-bold py-3 px-8 rounded-full shadow-lg">
                     <a href={`tel:${siteMetadata.phoneNumber.replace(/[()-\s]/g, '')}`}>
                       <i className="fas fa-phone-alt mr-2"></i> Call Now

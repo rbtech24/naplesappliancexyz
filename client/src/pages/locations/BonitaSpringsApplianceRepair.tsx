@@ -116,14 +116,11 @@ const BonitaSpringsApplianceRepair = () => {
               Expert appliance repair services in Bonita Springs, Florida. Same-day service available 
               for all major appliance brands throughout Lee County.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button asChild className="bg-[#ff6b00] hover:bg-white hover:text-[#0056b3] text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg">
                 <a href={`tel:${siteMetadata.phoneNumber}`}>
                   📞 Call {siteMetadata.phoneNumber}
                 </a>
-              </Button>
-              <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-[#0056b3] font-bold py-4 px-8 rounded-full text-lg">
-                <a href="/#contact">Schedule Service</a>
               </Button>
             </div>
           </div>
