@@ -39,7 +39,7 @@ export function BreadcrumbNav({ items, className = '' }: BreadcrumbNavProps) {
         
         {/* Dynamic items */}
         {items.map((item, index) => (
-          <React.Fragment key={`breadcrumb-${index}`}>
+          <React.Fragment key={index}>
             <BreadcrumbItem>
               {item.href && index < items.length - 1 ? (
                 <BreadcrumbLink asChild>
